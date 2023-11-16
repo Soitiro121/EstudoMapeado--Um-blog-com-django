@@ -14,5 +14,26 @@
             </a>
         {% endfor %}
     </small>
-    <p>{{ post.body | linebreaks }}</p>
+    <p>{{ post.body | linebreaks| safe }}</p>
+    <h3>Deixe um Comentário:</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.author }}
+        </div>
+        <div>
+            {{ form.body }}
+        </div>
+        <button type="submit" class="btn btn-primary">Comentar</button>
+    </form>
+
+    <h3>Comentários:</h3>
+    {% for comment in comments %}
+        <p>
+            Em {{ comment.created_on.date }} <b>{{ comment.author }}</b> disse:
+        </p>
+        <p>
+            {{ comment.body | linebreaks }}
+        </p>
+    {% endfor %}
 {% endblock page_content %}
