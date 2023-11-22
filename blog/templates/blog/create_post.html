@@ -1,0 +1,15 @@
+<!-- templates/blog/create_post.html -->
+
+{% extends 'base.html' %}
+
+{% block page_title %}
+<h2>Criar Nova Postagem</h2>
+{% endblock %}
+
+{% block page_content %}
+  <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Publicar</button>
+  </form>
+{% endblock %}
