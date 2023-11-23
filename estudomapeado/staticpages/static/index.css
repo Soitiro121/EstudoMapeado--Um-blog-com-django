@@ -1,0 +1,147 @@
+.estudo-ma-eado {
+  position: absolute;
+  top: 127px;
+  left: 569px;
+  font-size: 60px;
+  letter-spacing: 0.03em;
+  font-family: var(--font-otomanopee-one);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 308px;
+}
+.image-6-icon,
+.pin-layer-1-copy-1-2 {
+  position: absolute;
+  top: 284px;
+  left: 563px;
+  width: 216px;
+  height: 165px;
+  object-fit: cover;
+}
+.pin-layer-1-copy-1-2 {
+  top: 240px;
+  left: 671px;
+  width: 44px;
+  height: 69px;
+}
+.login-child,
+.login-item {
+  position: absolute;
+  left: 579px;
+  border-radius: var(--br-2xl);
+  width: 284px;
+  height: 41px;
+}
+.login-child {
+  border: 1px solid var(--color-gray);
+  background-color: var(--azulroxoclaro);
+  top: 486px;
+  box-sizing: border-box;
+}
+.login-item {
+  top: 724px;
+  background-color: var(--cinzaroxo);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.login-inner {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--verde-claro);
+  top: 730px;
+  left: 585px;
+  width: 273px;
+  height: 29px;
+}
+.login-inner,
+.rectangle-button,
+.rectangle-input {
+  position: absolute;
+  border-radius: var(--br-2xl);
+}
+.rectangle-input {
+  border: 1px solid var(--color-gray);
+  background-color: var(--azulroxoclaro);
+  top: 544px;
+  left: 579px;
+  box-sizing: border-box;
+  width: 284px;
+  height: 41px;
+}
+.rectangle-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--verde);
+  top: 624px;
+  left: 658px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 125px;
+  height: 38px;
+}
+.login2 {
+  font-weight: 500;
+}
+.span {
+  font-family: var(--font-jsmath-cmr10);
+}
+.login-txt {
+  line-break: anywhere;
+  width: 100%;
+}
+.criar-uma-conta,
+.entrar,
+.login1,
+.senha {
+  position: absolute;
+  top: 490px;
+  left: 524px;
+  letter-spacing: 0.07em;
+  display: flex;
+  align-items: center;
+  width: 213px;
+  height: 32px;
+}
+.criar-uma-conta,
+.entrar,
+.senha {
+  top: 548px;
+}
+.criar-uma-conta,
+.entrar {
+  top: 727px;
+  left: 615px;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  justify-content: center;
+}
+.entrar {
+  top: 624px;
+  left: 614px;
+  color: #464343;
+}
+.esqueceu-sua-senha {
+  text-decoration: underline;
+  position: absolute;
+  top: 585px;
+  left: 586px;
+  font-size: 14px;
+  color: inherit;
+  text-align: left;
+  display: inline-block;
+  width: 145px;
+  height: 22px;
+}
+.login {
+  position: relative;
+  background-color: var(--verde-claro);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-dimgray);
+  font-family: var(--font-kaisei-opti);
+}
