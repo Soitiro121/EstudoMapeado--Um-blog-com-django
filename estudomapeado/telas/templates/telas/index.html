@@ -25,9 +25,7 @@
       <div class="estudo-ma-eado">Estudo Ma eado</div>
       <img class="image-6-icon" alt="" src="{% static 'image-6@2x.png' %}" />
 
-      
       <img class="pin-layer-1-copy-1-2" alt="" src="{% static 'pin-layer-1-copy-1-2@2x.png' %}" />
-
 
       <input class="login-child" name="user_name" type="text" />
 
@@ -35,7 +33,7 @@
       <button class="login-inner"></button>
       <input class="rectangle-input" name="senha" type="text" />
 
-      <button class="rectangle-button"></button>
+      <button class="rectangle-button entrar-btn">Entrar</button>
       <div class="login1">
         <span class="login-txt">
           <span class="login2">Login</span>
@@ -48,9 +46,8 @@
           <span class="span"> </span>
         </span>
       </div>
-      <div class="criar-uma-conta">Criar uma conta</div>
-      <div class="entrar">Entrar</div>
-      <a class="esqueceu-sua-senha">Esqueceu sua senha?</a>
+      <a href="{% url 'cria_conta' %}" class="criar-uma-conta">Criar uma conta</a>
+      <a href="{% url 'cria_conta' %}" class="esqueceu-sua-senha">Esqueceu sua senha?</a>
     </div>
   </body>
 </html>

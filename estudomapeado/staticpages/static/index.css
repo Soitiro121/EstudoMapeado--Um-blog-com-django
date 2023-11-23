@@ -60,7 +60,15 @@
 .rectangle-input {
   position: absolute;
   border-radius: var(--br-2xl);
+  transition: box-shadow 0.3s ease-in-out;
 }
+
+.login-inner:hover,
+.rectangle-button:hover,
+.rectangle-input:hover {
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); 
+}
+
 .rectangle-input {
   border: 1px solid var(--color-gray);
   background-color: var(--azulroxoclaro);
@@ -69,6 +77,7 @@
   box-sizing: border-box;
   width: 284px;
   height: 41px;
+  transition: box-shadow 0.3s ease-in-out;
 }
 .rectangle-button {
   cursor: pointer;
@@ -144,4 +153,20 @@
   font-size: var(--font-size-lg);
   color: var(--color-dimgray);
   font-family: var(--font-kaisei-opti);
+}
+
+.rectangle-button.entrar-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--verde);
+  top: 624px;
+  left: 614px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 125px;
+  height: 38px;
+}
+
+.entrar-btn:hover {
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
 }

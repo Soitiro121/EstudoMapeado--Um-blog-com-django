@@ -1,7 +1,8 @@
 # telas/urls.py
 from django.urls import path
-from .views import login_page
+from .views import *
 
 urlpatterns = [
-    path('', login_page, name='login_page'),
+    path('', index, name='index'),
+    path('cria_conta/', cria_conta, name='cria_conta'),
 ]

@@ -1,5 +1,8 @@
 # telas/views.py
 from django.shortcuts import render
 
-def login_page(request):
-    return render(request, 'telas/login_page.html')
+def index(request):
+    return render(request, 'telas/index.html')
+
+def cria_conta(request):
+    return render(request, 'telas/cria_conta.html')
