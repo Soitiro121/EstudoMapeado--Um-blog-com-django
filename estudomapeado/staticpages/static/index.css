@@ -1,153 +1,34 @@
-.estudo-ma-eado {
-  position: absolute;
-  top: 127px;
-  left: 569px;
-  font-size: 60px;
-  letter-spacing: 0.03em;
-  font-family: var(--font-otomanopee-one);
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 308px;
-}
-.image-6-icon,
-.pin-layer-1-copy-1-2 {
-  position: absolute;
-  top: 284px;
-  left: 563px;
-  width: 216px;
-  height: 165px;
-  object-fit: cover;
-}
-.pin-layer-1-copy-1-2 {
-  top: 240px;
-  left: 671px;
-  width: 44px;
-  height: 69px;
-}
-.login-child,
-.login-item {
-  position: absolute;
-  left: 579px;
-  border-radius: var(--br-2xl);
-  width: 284px;
-  height: 41px;
-}
-.login-child {
-  border: 1px solid var(--color-gray);
-  background-color: var(--azulroxoclaro);
-  top: 486px;
-  box-sizing: border-box;
-}
-.login-item {
-  top: 724px;
-  background-color: var(--cinzaroxo);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-.login-inner {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: var(--verde-claro);
-  top: 730px;
-  left: 585px;
-  width: 273px;
-  height: 29px;
-}
-.login-inner,
-.rectangle-button,
-.rectangle-input {
-  position: absolute;
-  border-radius: var(--br-2xl);
-  transition: box-shadow 0.3s ease-in-out;
+body {
+  margin: 0;
+  line-height: normal;
 }
 
-.login-inner:hover,
-.rectangle-button:hover,
-.rectangle-input:hover {
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); 
+:root {
+  /* fonts */
+  --font-kaisei-opti: "Kaisei Opti";
+  --font-jsmath-cmr10: jsMath-cmr10;
+
+  /* font sizes */
+  --font-size-xl: 1.25rem;
+  --font-size-lg: 1.13rem;
+
+  /* Colors */
+  --verde-claro: #d5f9f1;
+  --color-dimgray: #5a5353;
+  --verde: #93c47d;
+  --color-gray: rgba(0, 0, 0, 0.28);
+  --azulroxoclaro: #cde6f3;
+  --cinzaroxo: #8f99bb;
+
+  /* Border radiuses */
+  --br-2xl: 21px;
 }
 
-.rectangle-input {
-  border: 1px solid var(--color-gray);
-  background-color: var(--azulroxoclaro);
-  top: 544px;
-  left: 579px;
-  box-sizing: border-box;
-  width: 284px;
-  height: 41px;
-  transition: box-shadow 0.3s ease-in-out;
-}
-.rectangle-button {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: var(--verde);
-  top: 624px;
-  left: 658px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  width: 125px;
-  height: 38px;
-}
-.login2 {
-  font-weight: 500;
-}
-.span {
-  font-family: var(--font-jsmath-cmr10);
-}
-.login-txt {
-  line-break: anywhere;
-  width: 100%;
-}
-.criar-uma-conta,
-.entrar,
-.login1,
-.senha {
-  position: absolute;
-  top: 490px;
-  left: 524px;
-  letter-spacing: 0.07em;
-  display: flex;
-  align-items: center;
-  width: 213px;
-  height: 32px;
-}
-.criar-uma-conta,
-.entrar,
-.senha {
-  top: 548px;
-}
-.criar-uma-conta,
-.entrar {
-  top: 727px;
-  left: 615px;
-  font-size: var(--font-size-xl);
-  font-weight: 500;
-  justify-content: center;
-}
-.entrar {
-  top: 624px;
-  left: 614px;
-  color: #464343;
-}
-.esqueceu-sua-senha {
-  text-decoration: underline;
-  position: absolute;
-  top: 585px;
-  left: 586px;
-  font-size: 14px;
-  color: inherit;
-  text-align: left;
-  display: inline-block;
-  width: 145px;
-  height: 22px;
-}
 .login {
   position: relative;
   background-color: var(--verde-claro);
   width: 100%;
-  height: 1024px;
+  height: 100vh;
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-lg);
@@ -155,18 +36,97 @@
   font-family: var(--font-kaisei-opti);
 }
 
-.rectangle-button.entrar-btn {
+.logo-icon {
+  position: absolute;
+  top: 5%; /* Adjusted for relative distance */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 200px;
+}
+
+.login-child,
+.login-item,
+.login-inner,
+.rectangle-input,
+.rectangle-button,
+.login1,
+.senha,
+.criar-uma-conta,
+.entrar,
+.esqueceu-sua-senha {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login-child {
+  top: 40%; /* Adjusted for relative distance */
+  border-radius: var(--br-2xl);
+  border: 1px solid var(--color-gray);
+  background-color: var(--azulroxoclaro);
+  box-sizing: border-box;
+  max-width: 17.75rem; /* Maximum size from the old file */
+  height: 2.3rem; /* Set height to match rectangle-input */
+}
+
+.login-item {
+  top: 40%; /* Adjusted for relative distance */
+  background-color: var(--cinzaroxo);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 17.75rem; /* Maximum size from the old file */
+}
+
+.login-inner,
+.rectangle-input {
+  top: 70%; /* Adjusted for relative distance */
+  border-radius: var(--br-2xl);
+  box-sizing: border-box;
+  height: 2.3rem;
+  max-width: 17.75rem; /* Maximum size from the old file */
+}
+
+.rectangle-input {
+  border: 1px solid var(--color-gray);
+  background-color: var(--azulroxoclaro);
+}
+
+.rectangle-button {
+  top: 80%; /* Adjusted for relative distance */
   cursor: pointer;
   border: 0;
   padding: 0;
   background-color: var(--verde);
-  top: 624px;
-  left: 614px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  width: 125px;
-  height: 38px;
+  max-width: 7.81rem; /* Maximum size from the old file */
+  height: 2.38rem; /* Height from the old file */
+  color: #464343; /* Color of the other "Entrar" text */
+  font-size: var(--font-size-xl); /* Font size of the other "Entrar" text */
+  font-weight: 500;
 }
 
-.entrar-btn:hover {
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+.login1,
+.senha,
+.criar-uma-conta,
+.entrar,
+.esqueceu-sua-senha {
+  top: 60%; /* Adjusted for relative distance */
+}
+
+@media (max-width: 300px) {
+  .login-child,
+  .login-item,
+  .login-inner,
+  .rectangle-input,
+  .rectangle-button,
+  .login1,
+  .senha,
+  .criar-uma-conta,
+  .entrar,
+  .esqueceu-sua-senha,
+  .logo-icon {
+    width: 90%;
+    left: 5%;
+  }
 }
