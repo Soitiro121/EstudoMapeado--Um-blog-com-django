@@ -22,179 +22,183 @@ body {
   }
 
   
-  .cadastro-child,
-  .cadastro-inner,
-  .cadastro-item,
-  .rectangle-input {
-    border: 1px solid var(--color-gray);
-    background-color: var(--azulroxoclaro);
-    position: absolute;
-    top: 527px;
-    left: 368px;
-    border-radius: var(--br-2xl);
-    box-sizing: border-box;
-    width: 284px;
-    height: 41px;
-  }
-  .cadastro-inner,
-  .cadastro-item,
-  .rectangle-input {
-    left: 786px;
-  }
-  .cadastro-inner,
-  .rectangle-input {
-    top: 627px;
-    left: 370px;
-  }
-  .rectangle-input {
-    left: 788px;
-  }
-  .logo-icon {
-    position: absolute;
-    top: 126px;
-    left: 591px;
-    width: 258px;
-    height: 241px;
-    object-fit: cover;
-  }
-  .informaes-para-cadastro {
-    position: absolute;
-    top: 449px;
-    left: 370px;
-    font-size: 20px;
-    text-decoration: underline;
-    display: inline-block;
-    width: 296px;
-    height: 23px;
-  }
-  .confirmao-da-senha,
-  .e-mail,
-  .nome-completo,
-  .senha {
-    position: absolute;
-    top: 504px;
-    left: 370px;
-    display: inline-block;
-    width: 199px;
-    height: 23px;
-  }
-  .confirmao-da-senha,
-  .e-mail,
-  .senha {
-    left: 788px;
-  }
-  .confirmao-da-senha,
-  .senha {
-    top: 604px;
-    left: 370px;
-  }
-  .confirmao-da-senha {
-    left: 788px;
-  }
-  .image-6,
-  .rectangle-button {
+.cadastro-child,
+.cadastro-inner,
+.cadastro-item,
+.rectangle-input {
+  border: 1px solid var(--color-gray);
+  background-color: var(--azulroxoclaro);
+  position: absolute;
+  top: 527px;
+  left: 368px;
+  border-radius: var(--br-2xl);
+  box-sizing: border-box;
+  width: 284px;
+  height: 41px;
+}
+.cadastro-inner,
+.cadastro-item,
+.rectangle-input {
+  left: 786px;
+}
+.cadastro-inner,
+.rectangle-input {
+  top: 627px;
+  left: 370px;
+}
+.rectangle-input {
+  left: 788px;
+}
+.logo-icon {
+  position: absolute;
+  top: 126px;
+  left: 591px;
+  width: 258px;
+  height: 241px;
+  object-fit: cover;
+}
+.informaes-para-cadastro {
+  position: absolute;
+  top: 449px;
+  left: 370px;
+  font-size: 20px;
+  text-decoration: underline;
+  display: inline-block;
+  width: 296px;
+  height: 23px;
+}
+.confirmao-da-senha,
+.e-mail,
+.nome-completo,
+.senha {
+  position: absolute;
+  top: 504px;
+  left: 370px;
+  display: inline-block;
+  width: 199px;
+  height: 23px;
+}
+.confirmao-da-senha,
+.e-mail,
+.senha {
+  left: 788px;
+}
+.confirmao-da-senha,
+.senha {
+  top: 604px;
+  left: 370px;
+}
+.confirmao-da-senha {
+  left: 788px;
+}
+.image-6,
+.rectangle-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  position: absolute;
+}
+.image-6 {
+  background-color: transparent;
+  top: 389px;
+  left: 368px;
+  width: 32px;
+  height: 32px;
+  background-image: url(./image6@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.rectangle-button {
+  background-color: var(--verde);
+  top: 892px;
+  left: 575px;
+  border-radius: var(--br-2xl);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 290px;
+  height: 46px;
+}
+.enviar-e-mail-de {
+  position: absolute;
+  top: 890px;
+  left: 582px;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+  color: #464343;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 275px;
+  height: 50px;
+}
+.cadastro-child1,
+.cadastro-child2,
+.cadastro-child3 {
     cursor: pointer;
-    border: 0;
-    padding: 0;
     position: absolute;
-  }
-  .image-6 {
-    background-color: transparent;
-    top: 389px;
-    left: 368px;
-    width: 32px;
-    height: 32px;
-    background-image: url(./public/image6@2x.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-  }
-  .rectangle-button {
-    background-color: var(--verde);
-    top: 892px;
-    left: 575px;
-    border-radius: var(--br-2xl);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    width: 290px;
-    height: 46px;
-  }
-  .enviar-e-mail-de {
-    position: absolute;
-    top: 890px;
-    left: 582px;
-    letter-spacing: 0.07em;
-    font-weight: 500;
-    color: #464343;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 275px;
-    height: 50px;
-  }
-  .cadastro-child1,
-  .cadastro-child2 {
-    cursor: pointer;
-    position: absolute;
-    top: 716px;
-    left: 384.22px;
     border-radius: var(--br-2xl);
     background-color: var(--azulroxoclaro);
     border: 1px solid var(--color-gray);
     box-sizing: border-box;
     width: 20px;
     height: 20px;
-  }
-  .cadastro-child2 {
+}
+
+.cadastro-child1 {
+    top: 716px;
+    left: 384.22px;
+}
+
+.cadastro-child2 {
     top: 714px;
     left: 569px;
-  }
-  .estudante {
-    position: absolute;
-    top: 714px;
-    left: 418px;
-    display: inline-block;
-    width: 199px;
-    height: 23px;
-  }
-  .termos-de-uso {
-    text-decoration: underline;
-  }
-  .li-e-concordo-container,
-  .professor {
-    position: absolute;
-    top: 781px;
-    left: 411px;
-    display: inline-block;
-    width: 301px;
-    height: 23px;
-  }
-  .professor {
-    top: 713px;
-    left: 600px;
-    width: 199px;
-  }
-  .cadastro-child3 {
-    position: absolute;
-    top: 785.25px;
-    left: 384px;
-    background-color: var(--azulroxoclaro);
-    border: 1px solid var(--color-gray);
-    box-sizing: border-box;
-    width: 14px;
-    height: 13px;
-    transform: rotate(-2deg);
-    transform-origin: 0 0;
-  }
-  .cadastro {
-    position: relative;
-    background-color: var(--verde-claro);
-    width: 100%;
-    height: 1024px;
-    overflow: hidden;
-    text-align: left;
-    font-size: var(--font-size-base);
-    color: var(--color-dimgray);
-    font-family: var(--font-kaisei-opti);
-  }
-  
+}
+.estudante {
+  position: absolute;
+  top: 714px;
+  left: 418px;
+  display: inline-block;
+  width: 199px;
+  height: 23px;
+}
+.termos-de-uso {
+  text-decoration: underline;
+}
+.li-e-concordo-container,
+.professor {
+  position: absolute;
+  top: 781px;
+  left: 411px;
+  display: inline-block;
+  width: 301px;
+  height: 23px;
+}
+.professor {
+  top: 713px;
+  left: 600px;
+  width: 199px;
+}
+.cadastro-child3 {
+  position: absolute;
+  top: 785.25px;
+  left: 384px;
+  background-color: var(--azulroxoclaro);
+  border: 1px solid var(--color-gray);
+  box-sizing: border-box;
+  width: 14px;
+  height: 13px;
+  transform: rotate(-2deg);
+  transform-origin: 0 0;
+}
+.cadastro {
+  position: relative;
+  background-color: var(--verde-claro);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray);
+  font-family: var(--font-kaisei-opti);
+}

@@ -14,6 +14,10 @@
   </head>
   <body>
     <div class="cadastro">
+      
+      <img style="width: 32px; height: 32px; left: 368px; top: 389px; position: absolute" src="{% static 'image6@2x.png' %}" />
+ 
+
       <input class="cadastro-child" type="text" />
 
       <input class="cadastro-item" type="text" />
@@ -22,19 +26,19 @@
 
       <input class="rectangle-input" type="text" />
 
-      <img class="logo-icon" alt="" src="./public/logo@2x.png" />
+      <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}"/>
 
       <div class="informaes-para-cadastro">Informações para cadastro</div>
       <div class="nome-completo">Nome completo</div>
       <div class="e-mail">E-mail</div>
       <div class="senha">Senha</div>
       <div class="confirmao-da-senha">Confirmação da senha</div>
-      <button class="image-6" id="menu_button"></button>
+      <a href="{% url 'index' %}"><button class="image-6" id="menu_button"></button></a>
       <button class="rectangle-button"></button>
       <div class="enviar-e-mail-de">Enviar e-mail de confirmação</div>
-      <input class="cadastro-child1" type="radio" />
+      <input class="cadastro-child1" type="checkbox" name="userType" />
+      <input class="cadastro-child2" type="checkbox" name="userType" />
 
-      <input class="cadastro-child2" type="radio" />
 
       <div class="estudante">Estudante</div>
       <div class="li-e-concordo-container">
