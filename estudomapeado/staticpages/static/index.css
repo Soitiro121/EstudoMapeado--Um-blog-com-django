@@ -53,7 +53,6 @@ body {
 .login1,
 .senha,
 .criar-uma-conta,
-.entrar,
 .esqueceu-sua-senha {
   position: absolute;
   width: 80%;
@@ -80,7 +79,7 @@ body {
 
 .login-inner,
 .rectangle-input {
-  top: 70%; /* Adjusted for relative distance */
+  top: 53%; /* Adjusted for relative distance */
   border-radius: var(--br-2xl);
   box-sizing: border-box;
   height: 2.3rem;
@@ -93,7 +92,7 @@ body {
 }
 
 .rectangle-button {
-  top: 80%; /* Adjusted for relative distance */
+  top: 65%; /* Adjusted for relative distance */
   cursor: pointer;
   border: 0;
   padding: 0;
@@ -104,15 +103,56 @@ body {
   color: #464343; /* Color of the other "Entrar" text */
   font-size: var(--font-size-xl); /* Font size of the other "Entrar" text */
   font-weight: 500;
+  border-radius: 20px;
 }
 
-.login1,
-.senha,
-.criar-uma-conta,
-.entrar,
-.esqueceu-sua-senha {
-  top: 60%; /* Adjusted for relative distance */
+.rectangle-button:hover {
+  background-color: #72a35b; /* Increase the size on hover */
 }
+
+.login1 {
+  top:35%;
+  left: 42%;
+}
+.senha {
+  top:49%;
+  left: 42%;
+}
+.criar-uma-conta {
+  top:70%;
+  left: 50%;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+}
+
+.esqueceu-sua-senha {
+  top: 59%;
+  left: 46%;
+  font-size: 0.93rem;
+}
+
+.criar-conta-button {
+  position: absolute;
+  top: 80%; /* Adjusted for relative distance */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22%;
+  cursor: pointer;
+  border: 5px;
+  padding: 0;
+  background-color: var(--cinzaroxo);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 2.7rem; /* Adjust as needed */
+  color: #464343;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.criar-conta-button:hover {
+  background-color: #858fad; /* Change color on hover */
+}
+
 
 @media (max-width: 300px) {
   .login-child,
@@ -123,8 +163,8 @@ body {
   .login1,
   .senha,
   .criar-uma-conta,
-  .entrar,
   .esqueceu-sua-senha,
+  .criar-conta-button
   .logo-icon {
     width: 90%;
     left: 5%;
