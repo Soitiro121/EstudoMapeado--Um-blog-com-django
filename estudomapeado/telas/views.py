@@ -8,3 +8,6 @@ def index(request):
 
 def cria_conta(request):
     return render(request, 'telas/cria_conta.html')
+
+def altera_senha(request):
+    return render(request, 'telas/altera_senha.html')

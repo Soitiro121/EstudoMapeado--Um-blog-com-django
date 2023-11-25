@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'cria_conta.css' %}" />
+    <link rel="stylesheet" href="{% static 'altera_senha.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=jsMath-cmr10:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="alterao-de-senha">
+      <input class="alterao-de-senha-child" type="text" />
+
+      <input class="alterao-de-senha-item" type="text" />
+
+      <input class="alterao-de-senha-inner" type="text" />
+
+      <button class="rectangle-button"></button>
+      <div class="enviar-e-mail-de">Enviar e-mail de confirmação</div>
+      <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+
+      <div class="e-mail">E-mail</div>
+      <div class="senha">Senha</div>
+      <div class="confirmao-da-senha">Confirmação da senha</div>
+      <button class="image-6"></button>
+      <div class="esqueceu-a-sua">Esqueceu a sua senha?</div>
+    </div>
+  </body>
+</html>
