@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'cria_conta.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500&display=swap"
+    />
+  </head>
+  <body>
+    <div class="cadastro">
+
+      <img class="imagem-principal" src="{% static 'image6@2x.png' %}" alt="Descrição da imagem" />
+
+      <input class="input-nome" type="text" placeholder="Nome completo" />
+      <input class="input-email" type="text" placeholder="E-mail" />
+      <input class="input-senha" type="password" placeholder="Senha" />
+      <input class="input-confirmacao-senha" type="password" placeholder="Confirmação da senha" />
+
+      <img class="logo-icon" src="{% static 'logo@2x.png' %}" alt="Logo da Empresa"/>
+
+      <label for="nome">Nome completo</label>
+      <label for="email">E-mail</label>
+      <label for="senha">Senha</label>
+      <label for="confirmacao-senha">Confirmação da senha</label>
+
+      <a href="{% url 'login' %}"><button class="botao-voltar" id="menu_button">Voltar</button></a>
+      <button class="botao-enviar">Enviar</button>
+
+      <input id="estudante" class="checkbox-estudante" type="checkbox" name="userTypeEstudante" />
+      <input id="professor" class="checkbox-professor" type="checkbox" name="userTypeProfessor" />
+
+      <label for="estudante">Estudante</label>
+      <label for="professor">Professor</label>
+
+      <div class="termos">
+        Li e concordo com os <span class="termos-de-uso">Termos de uso</span>
+      </div>
+    </div>
+  </body>
+</html>
