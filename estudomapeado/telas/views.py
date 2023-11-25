@@ -1,30 +1,15 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib.auth.hashers import make_password
-
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib.auth.hashers import make_password
-
-
-
-from django.contrib.auth.models import User, Group
-from django.contrib.auth.hashers import make_password
-from django.shortcuts import render, redirect
-
-from django.contrib.auth.models import User, Group
-from django.shortcuts import render, redirect
+from django.contrib.auth.models import Group
 
 
 def cria_conta(request):
     if request.method == 'POST':
         # Obter dados do formulário
-        nome_completo = request.POST.get('nome_completo')
+        nome_completo = request.POST.get('nome')
         email = request.POST.get('email')
         senha = request.POST.get('senha')
-        confirmacao_senha = request.POST.get('confirmacao_senha')
+        confirmacao_senha = request.POST.get('confirmacao-senha')
         tipo_usuario = request.POST.get('userType')  # 'aluno' ou 'professor'
 
         # Validação básica
@@ -62,8 +47,8 @@ def cria_conta(request):
 
 def user_login(request):
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+        username = request.POST['nome']
+        password = request.POST['senha']
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
@@ -75,7 +60,6 @@ def user_login(request):
         else:
             # Invalid login
             pass
-
 
 
 @login_required
@@ -94,3 +78,31 @@ def teacher_home(request):
         return redirect('login')
     # Renderize o template para professores
     return render(request, 'professor_home.html')
+
+from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
+
+def altera_senha(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        nova_senha = request.POST.get('nova_senha')
+        confirmacao_senha = request.POST.get('confirmacao_senha')
+
+        if nova_senha == confirmacao_senha:
+            try:
+                user = User.objects.get(email=email)
+                user.password = make_password(nova_senha)
+                user.save()
+
+                messages.success(request, 'Senha alterada com sucesso.')
+                return redirect('login')  # Substitua pelo nome da sua URL de login
+            except User.DoesNotExist:
+                messages.error(request, 'Usuário não encontrado.')
+
+        else:
+            messages.error(request, 'As senhas não coincidem.')
+
+    return render(request, 'altera_senha.html')
