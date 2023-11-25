@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-kaisei-opti: "Kaisei Opti";
+    --font-inherit: inherit;
+  
+    /* font sizes */
+    --font-size-sm: 0.88rem;
+    --font-size-mid: 1.06rem;
+  
+    /* Colors */
+    --amarelo: #fadfac;
+    --azulroxoclaro: #cde6f3;
+    --rosa: #fd8686;
+  
+    /* Paddings */
+    --padding-lgi: 1.19rem;
+  }
+
+  .logo-icon {
+    position: absolute;
+    top: 5%; 
+    left: 55%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: 200px;
+  }
+  .image-6 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 23.94rem;
+    left: 23%;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(./image6@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .group-child {
+    position: absolute;
+    top: 4.31rem;
+    left: 0;
+    border-radius: 48px;
+    background-color: var(--azulroxoclaro);
+    border: 5px solid var(--rosa);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  .poltica-privacidade1 {
+    font-size: var(--font-size-mid);
+  }
+  .poltica-privacidade {
+    margin: 0;
+  }
+  .estudo-mapeado1 {
+    text-decoration: underline;
+  }
+  .estudo-mapeado {
+    color: inherit;
+  }
+  .b-no-difundir-propaganda-ou {
+    margin-bottom: false;
+  }
+  .a-no-se-envolver-em-atividad {
+    margin: 0;
+    padding-left: var(--padding-lgi);
+  }
+  .poltica-privacidade-a-container {
+    position: absolute;
+    top: 6.63rem;
+    left: 10%;
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+  }
+  .termos-de-uso1 {
+    position: absolute;
+    top: 0;
+    left: 0.25rem;
+    font-size: 200%;
+    text-decoration: underline;
+    display: inline-block;
+    font-family: var(--font-kaisei-opti);
+    color: #000;
+    width: 100%;
+    height: 2.88rem;
+  }
+  .rectangle-parent {
+    position: absolute;
+    top: 23.31rem;
+    left: 30%;
+    width: 50%;
+    height: 100%;
+  }
+  .termos-de-uso {
+    position: relative;
+    background-color: var(--amarelo);
+    width: 100%;
+    height: 187.5rem;
+    overflow: hidden;
+    text-align: justify;
+    font-size: var(--font-size-sm);
+    color: var(--font-inherit);
+    font-family: var(--font-inherit);
+  }
+
+
+  
+ 
+  

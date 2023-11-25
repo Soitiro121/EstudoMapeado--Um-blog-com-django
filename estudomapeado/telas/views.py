@@ -11,3 +11,6 @@ def cria_conta(request):
 
 def altera_senha(request):
     return render(request, 'telas/altera_senha.html')
+
+def termos(request):
+    return render(request, 'telas/termos.html')
