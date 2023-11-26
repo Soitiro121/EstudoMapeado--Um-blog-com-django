@@ -1,38 +1,45 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
     <link rel="stylesheet" href="{% static 'cria_conta.css' %}" />
     <link rel="stylesheet" href="{% static 'altera_senha.css' %}" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=jsMath-cmr10:wght@400&display=swap"
-    />
-  </head>
-  <body>
-    <div class="alterao-de-senha">
-      <input class="alterao-de-senha-child" type="text" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=jsMath-cmr10:wght@400&display=swap" />
+</head>
+<body>
+    <div class="alteracao-de-senha">
+        <form method="post" action="{% url 'altera_senha' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input class="form-control" name="email" id="email" type="email" placeholder="E-mail" required />
+            </div>
 
-      <input class="alterao-de-senha-item" type="text" />
+            <div class="form-group">
+                <label for="nova_senha">Nova Senha</label>
+                <input class="form-control" name="nova_senha" id="nova_senha" type="password" placeholder="Nova Senha" required />
+            </div>
 
-      <input class="alterao-de-senha-inner" type="text" />
+            <div class="form-group">
+                <label for="confirmacao_senha">Confirmação da Senha</label>
+                <input class="form-control" name="confirmacao_senha" id="confirmacao_senha" type="password" placeholder="Confirmação da Senha" required />
+            </div>
 
-      <button class="rectangle-button"></button>
-      <div class="enviar-e-mail-de">Enviar e-mail de confirmação</div>
-      <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+            <button type="submit" class="rectangle-button">Alterar Senha</button>
+        </form>
 
-      <div class="e-mail">E-mail</div>
-      <div class="senha">Senha</div>
-      <div class="confirmao-da-senha">Confirmação da senha</div>
-      <button class="image-6"></button>
-      <div class="esqueceu-a-sua">Esqueceu a sua senha?</div>
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div>{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <img class="logo-icon" alt="Logo" src="{% static 'logo@2x.png' %}" />
     </div>
-  </body>
+</body>
 </html>
