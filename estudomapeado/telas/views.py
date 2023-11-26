@@ -1,7 +1,10 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import Group
-
+from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
+from django.shortcuts import render, redirect
+from django.contrib import messages
 
 def cria_conta(request):
     if request.method == 'POST':
@@ -34,7 +37,7 @@ def cria_conta(request):
                 user.groups.add(group)
 
                 # Redirecionar para a página de login ou outra página conforme necessário
-                return redirect('login')
+                return redirect('login.html')
 
             except Exception as e:
                 # Log a exceção ou informe ao usuário
@@ -78,11 +81,6 @@ def teacher_home(request):
         return redirect('login')
     # Renderize o template para professores
     return render(request, 'professor_home.html')
-
-from django.contrib.auth.models import User
-from django.contrib.auth.hashers import make_password
-from django.shortcuts import render, redirect
-from django.contrib import messages
 
 
 def altera_senha(request):
