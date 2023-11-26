@@ -12,4 +12,5 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/login/', permanent=True)),  # Redirecionamento para login
     path('altera_senha/', altera_senha, name='altera_senha'),
     path('termos/', views.termos, name='termos'),
+    path('sucesso/', views.sucesso, name='sucesso'),
 ]

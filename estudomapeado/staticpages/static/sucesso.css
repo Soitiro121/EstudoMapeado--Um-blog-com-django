@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-kaisei-opti: "Kaisei Opti";
+  
+    /* font sizes */
+    --font-size-base: 1rem;
+  
+    /* Colors */
+    --verde-claro: #d5f9f1;
+    --color-dimgray: #5a5353;
+  }
+
+  .image-6-icon,
+  .image-7-icon,
+  .logo-icon {
+    position: absolute;
+    top: 5%; /* Adjusted for relative distance */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: 200px;
+  }
+  .image-6-icon {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 23.94rem;
+    left: 23%;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(./image6@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .image-7-icon {
+    top: 27.5rem;
+    left: 50%;
+    width: 10rem;
+    height: 10rem;
+  }
+  .blank-line {
+    margin: 0;
+  }
+  .e-mail-enviado,
+  .nota-caso-voc-container {
+    position: absolute;
+    top: 37.5rem;
+    left: 43%;
+    display: inline-block;
+    width: 12%;
+    height: 2.25rem;
+  }
+  .nota-caso-voc-container {
+    top: 44.25rem;
+    left: 35%;
+    text-align: justify;
+    width: 35%;
+    height: 7rem;
+  }
+  .sucesso {
+    position: relative;
+    background-color: var(--verde-claro);
+    width: 100%;
+    height: 64rem;
+    overflow: hidden;
+    text-align: center;
+    font-size: var(--font-size-base);
+    color: var(--color-dimgray);
+    font-family: var(--font-kaisei-opti);
+  }
+  

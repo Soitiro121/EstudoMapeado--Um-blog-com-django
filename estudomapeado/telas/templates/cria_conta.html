@@ -29,7 +29,10 @@
       <div class="confirmao-da-senha">Confirmação da senha</div>
 
       <a href="{% url 'login' %}"><button class="image-6" id="menu_button"></button></a>
-      <button class="rectangle-button">Enviar e-mail de confirmação</button>
+      <a href="{% url 'sucesso' %}">
+        <button class="rectangle-button">Enviar e-mail de confirmação</button>
+      </a>
+      
 
       <label for="checkbox-estudante" class="checkbox-label1">
         <input id="checkbox-estudante" class="checkbox-estudante" type="checkbox" name="userTypeEstudante" />

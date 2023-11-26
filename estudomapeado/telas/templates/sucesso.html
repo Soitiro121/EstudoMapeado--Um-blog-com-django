@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'sucesso.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="sucesso">
+      <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+
+      <a href="{% url 'login' %}"><button class="image-6-icon" id="menu_button"></button></a>
+
+      <img class="image-7-icon" alt="" src="{% static 'check.png' %}" />
+
+      <div class="e-mail-enviado">
+        <p class="blank-line">E-mail enviado.</p>
+        <p class="blank-line">&nbsp;</p>
+        <p class="blank-line">&nbsp;</p>
+      </div>
+      <div class="nota-caso-voc-container">
+        <p class="blank-line">Nota:</p>
+        <p class="blank-line">&nbsp;</p>
+        <p class="blank-line">
+          Caso você esteja tentando alterar a senha e não recebeu um e-mail,
+          isso indica que o seu e-mail não consta em nossos cadastros. Tente um
+          e-mail diferente ou crie uma nova conta
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
