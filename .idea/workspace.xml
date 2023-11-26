@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="adiçao de arquivos">
-      <change afterPath="$PROJECT_DIR$/.idea/EstudoMapeado--Um-blog-com-django.iml" afterDir="false" />
+    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="conserto do template termos de uso">
+      <change afterPath="$PROJECT_DIR$/estudomapeado/staticpages/templates/base_altera_confirma.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/staticpages/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/staticpages/static/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +22,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="tela-de-login" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,37 +51,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/douol/SisInfoEM",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/douol/SisInfoEM&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\douol\SisInfoEM\blog\static\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\douol\EstudoMapeado--Um-blog-com-django\estudomapeado\telas\templates" />
+      <recent name="C:\Users\douol\EstudoMapeado--Um-blog-com-django\estudomapeado\telas\templates\registration" />
       <recent name="C:\Users\douol\SisInfoEM\blog" />
       <recent name="C:\Users\douol\SisInfoEM" />
       <recent name="C:\Users\douol\SisInfoEM\blog\templates\blog" />
-      <recent name="C:\Users\douol\SisInfoEM\blog\templates" />
-      <recent name="C:\Users\douol\SisInfoEM\blog\templates\blog\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -88,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.category.html" />
         <item itemvalue="JavaScript Debug.category.html" />
         <item itemvalue="JavaScript Debug.category.html" />
         <item itemvalue="JavaScript Debug.category.html" />
@@ -118,7 +121,7 @@
       <workItem from="1700618576603" duration="5034000" />
       <workItem from="1700762043367" duration="1808000" />
       <workItem from="1700778086066" duration="2198000" />
-      <workItem from="1700862700873" duration="4528000" />
+      <workItem from="1700862700873" duration="15165000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -416,7 +419,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700619240436</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="pequenas alteraçoes para funcionamento das urls">
+      <option name="closed" value="true" />
+      <created>1700869249011</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1700869249011</updated>
+    </task>
+    <task id="LOCAL-00039" summary="conserto do template termos de uso">
+      <option name="closed" value="true" />
+      <created>1700963981495</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1700963981495</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,8 +485,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="inserção das view dos modelos" />
-    <MESSAGE value="confecção das views" />
     <MESSAGE value="Item 1 : Apenas com views funcionais, sem utilizar Django forms e sem validação de dados" />
     <MESSAGE value="Item 2 : Apenas com views funcionais, sem utilizar Django forms e sem validação de dados" />
     <MESSAGE value="Item 2 : apenas com views funcionais, utilizando um Django form" />
@@ -491,7 +508,9 @@
     <MESSAGE value="Inicial" />
     <MESSAGE value="Condição debug TRUE&#10;Superusuario: sisinfo&#10;senha:pmr3304" />
     <MESSAGE value="adiçao de arquivos" />
-    <option name="LAST_COMMIT_MESSAGE" value="adiçao de arquivos" />
+    <MESSAGE value="pequenas alteraçoes para funcionamento das urls" />
+    <MESSAGE value="conserto do template termos de uso" />
+    <option name="LAST_COMMIT_MESSAGE" value="conserto do template termos de uso" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SisInfoEM$main.coverage" NAME="main Coverage Results" MODIFIED="1700587175318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
