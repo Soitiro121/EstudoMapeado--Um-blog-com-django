@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="pequenas alteraçoes para funcionamento das urls">
-      <change afterPath="$PROJECT_DIR$/estudomapeado/telas/templates/altera_senha.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudomapeado/estudomapeado/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/estudomapeado/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudomapeado/telas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/estudomapeado/telas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/views.py" afterDir="false" />
     </list>
