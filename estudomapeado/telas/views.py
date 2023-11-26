@@ -106,3 +106,7 @@ def altera_senha(request):
             messages.error(request, 'As senhas não coincidem.')
 
     return render(request, 'altera_senha.html')
+
+
+def termos(request):
+    return render(request, 'telas/termos.html')
