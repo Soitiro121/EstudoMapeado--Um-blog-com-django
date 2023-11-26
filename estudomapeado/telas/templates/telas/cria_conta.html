@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    
     <link rel="stylesheet" href="{% static 'cria_conta.css' %}" />
     <link
       rel="stylesheet"
@@ -14,38 +13,40 @@
   </head>
   <body>
     <div class="cadastro">
+
       
-      <img style="width: 32px; height: 32px; left: 368px; top: 389px; position: absolute" src="{% static 'image6@2x.png' %}" />
- 
 
-      <input class="cadastro-child" type="text" />
+      <input class="cadastro-child" type="text" placeholder="Nome completo" />
+      <input class="cadastro-item" type="text" placeholder="E-mail" />
+      <input class="cadastro-inner" type="password" placeholder="Senha" />
+      <input class="rectangle-input" type="password" placeholder="Confirmação da senha" />
 
-      <input class="cadastro-item" type="text" />
+      <img class="logo-icon" src="{% static 'logo@2x.png' %}" alt="Logo da Empresa"/>
 
-      <input class="cadastro-inner" type="text" />
-
-      <input class="rectangle-input" type="text" />
-
-      <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}"/>
-
-      <div class="informaes-para-cadastro">Informações para cadastro</div>
       <div class="nome-completo">Nome completo</div>
       <div class="e-mail">E-mail</div>
       <div class="senha">Senha</div>
       <div class="confirmao-da-senha">Confirmação da senha</div>
-      <a href="{% url 'index' %}"><button class="image-6" id="menu_button"></button></a>
-      <button class="rectangle-button"></button>
-      <div class="enviar-e-mail-de">Enviar e-mail de confirmação</div>
-      <input class="cadastro-child1" type="checkbox" name="userType" />
-      <input class="cadastro-child2" type="checkbox" name="userType" />
 
+      <a href="{% url 'login' %}"><button class="image-6" id="menu_button"></button></a>
+      <button class="rectangle-button">Enviar e-mail de confirmação</button>
 
-      <div class="estudante">Estudante</div>
+      <label for="checkbox-estudante" class="checkbox-label1">
+        <input id="checkbox-estudante" class="checkbox-estudante" type="checkbox" name="userTypeEstudante" />
+        Estudante
+      </label>
+
+      <label for="checkbox-professor" class="checkbox-label2">
+        <input id="checkbox-professor" class="checkbox-professor" type="checkbox" name="userTypeProfessor" />
+        Professor
+      </label>
+
+      
+
       <div class="li-e-concordo-container">
         Li e concordo com os
         <a href="{% url 'termos' %}" class="termos-de-uso">Termos de uso</a>
       </div>
-      <div class="professor">Professor</div>
       <input class="cadastro-child3" type="checkbox" />
     </div>
   </body>
