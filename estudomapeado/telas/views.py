@@ -109,4 +109,4 @@ def altera_senha(request):
 
 
 def termos(request):
-    return render(request, 'telas/termos.html')
+    return render(request, 'termos.html')
