@@ -9,11 +9,11 @@ from . models import *
 def cria_conta(request):
     if request.method == 'POST':
         # Obter dados do formulário
-        nome_completo = request.POST.get('nome-completo')
-        email = request.POST.get('e-mail')  # Corrigido o nome do campo
+        nome_completo = request.POST.get('nome_completo')
+        email = request.POST.get('email')  # Corrigido o nome do campo
         senha = request.POST.get('senha')
-        confirmacao_senha = request.POST.get('confirmacao-da-senha')  # Corrigido o nome do campo
-        tipos_usuario = request.POST.getlist('userType')  # Retorna uma lista com os valores marcados
+        confirmacao_senha = request.POST.get('confirmacao_da_senha')  # Corrigido o nome do campo
+        tipos_usuario = request.POST.get('userType')  # Retorna uma lista com os valores marcados
 
         # Validação básica
         if senha == confirmacao_senha:
@@ -38,8 +38,8 @@ def cria_conta(request):
 
             except Exception as e:
                 # Log a exceção ou informe ao usuário
-                print(e)  # Exemplo básico
-                # Aqui você pode adicionar um retorno para informar o usuário do erro
+                print("Erro ao criar o usuário:", e)# Exemplo básico
+
 
     # Renderizar formulário de cadastro para método GET
     return render(request, 'cria_conta.html')
@@ -47,7 +47,7 @@ def cria_conta(request):
 
 @login_required
 def home(request):
-    context = {'is_aluno': request.user.groups.filter(name='Estudante').exists(),
+    context = {'is_estudante': request.user.groups.filter(name='Estudante').exists(),
                'is_professor': request.user.groups.filter(name='Professor').exists()}
     return render(request, 'home.html', context)
 

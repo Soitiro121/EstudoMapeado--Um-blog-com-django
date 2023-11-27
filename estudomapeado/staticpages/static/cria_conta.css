@@ -141,8 +141,8 @@ body {
   height: 50px;
 }
 
-.checkbox-estudante,
-.checkbox-professor {
+.radio-estudante,
+.radio-professor {
     position: absolute;
     top: 35%; /* Adjust the top position accordingly */
     transform: translate(-50%, -50%);
@@ -152,27 +152,27 @@ body {
     left: -30%; /* Adjust the left position accordingly */
 }
 
-.checkbox-label1,
-.checkbox-label2 {
+.radio-label1,
+.radio-label2 {
     position: absolute;
     top: 72%; /* Adjust the top position accordingly */
     transform: translate(-50%, -50%);
     display: inline-block;
 }
 
-.checkbox-label1 {
+.radio-label1 {
     left: 34%; /* Adjust the left position accordingly */
 }
 
-.checkbox-label2 {
+.radio-label2 {
     left: 60%; /* Adjust the left position accordingly */
 }
 
-.checkbox-professor {
+.radio-professor {
     left: -38%; /* Adjust the left position accordingly */
 }
 
-.cadastro-child3 {
+.radio-child3 {
     cursor: pointer;
     position: absolute;
     border-radius: var(--br-2xl);
