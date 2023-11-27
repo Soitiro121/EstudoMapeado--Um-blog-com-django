@@ -58,14 +58,17 @@ body {
     display: inline-block;
   }
   .textos1 {
+    position: absolute;
     top: 16.25rem;
-    left: 38.75rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 3rem;
     text-decoration: underline;
     text-align: center;
     width: 11rem;
     height: 3.63rem;
   }
+  
   .sumrio {
     top: 21.63rem;
     left: 6.81rem;
@@ -83,9 +86,10 @@ body {
     object-fit: cover;
   }
   .image-31-icon {
-    top: 6.88rem;
-    left: 52%;
-    transform: translateX(-50%);
+    position: absolute;
+    top: 9rem;
+    left: 51%;
+    transform: translate(-50%, -50%);
     width: 7.69rem;
     height: 7.63rem;
   }
@@ -98,23 +102,27 @@ body {
     width: 100%;
     height: 76.06rem;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    z-index: 1; /* Set a higher z-index value */
   }
   
   .lista-de-cards {
     display: flex;
     flex-wrap: wrap;
     max-width: 80%;
+    margin: 30rem auto 0; /* Adjust the top margin to move it lower on the page */
+    justify-content: space-around;
+    align-items: center;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0 auto;
+    z-index: 2; /* Set a lower z-index value than .textos-item */
   }
   
-  .card {
-    flex: 0 0 40%; /* Set a fixed width for the cards, allowing a small gap between them */
+  
+  
+  
+  .card,
+  .small-card {
+    flex: 0 0 calc(48% - 2rem); /* Adjust the width of the cards to leave symmetrical space between them */
+    /* The -2rem accounts for the margin on each side */
     border: 1px solid var(--secondary-bg-color);
     border-radius: 5px;
     box-shadow: 2px 2px 10px var(--color-shadow);
@@ -127,15 +135,6 @@ body {
     text-align: center;
   }
   
-  .small-card {
-    flex: 0 0 40%; /* Set a fixed width for the small cards */
-    border: 1px solid var(--secondary-bg-color);
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px var(--color-shadow);
-    margin: 1rem;
-    padding: 1.25rem;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-  }
   
   .card img,
   .small-card img {
