@@ -2,22 +2,44 @@
 
 <!DOCTYPE html>
 <html>
-    <h2>Todos os Filmes</h2>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
     
-    {% if texto_list %}
-        <section class="lista-de-cards">
-            {% for texto in texto_list %}
-                <article class="card">
-                    
-                    <img src="{{ texto.link }}"/>
-                    
-                    <p>{{ texto.title }} ({{ texto.created_on }})</p>
-                </article>
-            {% endfor %}
-        </section>
-    {% else %}
-        <p>Não foi encontrado nenhum filme.</p>
-    {% endif %}
-
+        <link rel="stylesheet" href="{% static 'textos.css' %}" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;700&display=swap"
+        />
+      </head>
+    
+      <body>
+        <div class="textos">
+          <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+    
+          <div class="image-25"></div>
+          <div class="textos-child"></div>
+          <b class="textos1">Textos</b>
+          <b class="sumrio">Sumário</b>
+          <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
+    
+          <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
+    
+        {% if texto_list %}
+            <section class="lista-de-cards">
+                {% for texto in texto_list %}
+                    <article class="card">
+                        
+                        <img src="{{ texto.link }}"/>
+                        
+                        <p>{{ texto.title }} ({{ texto.created_on }})</p>
+                    </article>
+                {% endfor %}
+            </section>
+        {% else %}
+            <p>Não foi encontrado nenhum texto.</p>
+        {% endif %}
+        </div>
+    
 
 </html>

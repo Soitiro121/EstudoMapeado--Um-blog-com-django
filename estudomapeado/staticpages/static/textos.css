@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #000000;
+    
     --secondary-color: #118bee;
     --tertiary-color: #f44d27;
     --secondary-color-light: #30b2ff;
@@ -7,9 +7,24 @@
     --bg-color: #fff;
     --secondary-bg-color: #e9e9e9;
     --color-shadow: #f4f4f4;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    line-height: 1.5em;
+    
+    /* fonts */
+    --font-kaisei-opti: "Kaisei Opti";
+
+    /* font sizes */
+    --font-size-mini: 0.94rem;
+    --font-size-xl: 1.25rem;
+
+    /* Colors */
+    --rosa: #fd8686;
+    --color-black: #000;
+    --cinzaroxo: #8f99bb;
+    --color-gray: rgba(0, 0, 0, 0.28);
+    --color-dimgray: #5a5353;
+    --azulroxoclaro: #cde6f3;
+
+    /* Border radiuses */
+    --br-8xl: 27px;
   }
   
   * {
@@ -21,53 +36,11 @@
     height: 100%;
   }
   
-  header#cabecalho-principal {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1080px;
-    padding: 3rem 1rem;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  li a {
-    color: var(--secondary-color);
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    color: var(--secondary-color-light);
-    text-decoration: underline;
-  }
-  
   body {
     display: flex;
     flex-direction: column;
   }
   
-  nav#navegacao-principal li {
-    display: inline-block;
-    padding: 10px;
-  }
-  
-  main#conteiner-principal {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1080px;
-    padding: 1rem 1rem;
-    flex-grow: 1;
-  }
-  
-  footer#rodape-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 1rem;
-  }
   
   .lista-de-cards {
     display: flex;
@@ -75,9 +48,9 @@
   }
   
   .card {
-    border: 1px solid var(--secondary-bg-color);
+    border: 1px solid var(--rosa);
     border-radius: 5px;
-    box-shadow: 2px 2px 10px var(--color-shadow);
+    box-shadow: 2px 2px 10px #ed7e7e;
     margin: 1rem;
     padding: 1.25rem;
     width: 285px;
@@ -100,57 +73,281 @@
     width: 100%;
   }
   
-  a {
-    color: var(--secondary-color);
-    text-decoration: none;
-  }
   
-  a:hover {
-    color: var(--secondary-color-light);
-    text-decoration: underline;
+  .logo-icon {
+    position: absolute;
+    top: 3.25rem;
+    left: 79.38rem;
+    width: 7.94rem;
+    height: 7.44rem;
+    object-fit: cover;
   }
-  
-  .dados-de-filme {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    padding: 1rem 0;
+  .image-25,
+  .textos-child {
+    position: absolute;
+    top: 78.38rem;
+    left: 35.69rem;
+    width: 4.56rem;
+    height: 4.56rem;
   }
-  
-  .dados-de-filme img {
-    width: 285px;
-    box-shadow: 2px 2px 10px var(--color-shadow);
+  .textos-child {
+    top: 76.06rem;
+    left: 34.13rem;
+    border-radius: var(--br-8xl);
+    background-color: var(--azulroxoclaro);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--cinzaroxo);
+    box-sizing: border-box;
+    width: 20.25rem;
+    height: 9.25rem;
   }
-  
-  .dados-de-filme ul {
-    list-style-type: none;
-  }
-  
-  input {
-    display: block;
-    width: 100%;
-    max-width: 560px;
-    border: 1px solid var(--secondary-bg-color);
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    padding: 0.4rem 0.8rem;
-  }
-  
-  button {
-    background-color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-    color: var(--bg-color);
-    border-radius: 5px;
+  .sumrio,
+  .textos1 {
+    position: absolute;
     display: inline-block;
-    font-size: medium;
-    font-weight: bold;
-    margin: 0.5rem 0;
-    padding: 1rem 2rem;
+  }
+  .textos1 {
+    top: 16.25rem;
+    left: 38.75rem;
+    font-size: 3rem;
+    text-decoration: underline;
+    text-align: center;
+    width: 11rem;
+    height: 3.63rem;
+  }
+  .sumrio {
+    top: 21.63rem;
+    left: 6.81rem;
+    font-size: 1.5rem;
+    width: 16.38rem;
+    height: 1.31rem;
+  }
+  .image-20-icon,
+  .image-31-icon {
+    position: absolute;
+    top: 21.63rem;
+    left: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+  }
+  .image-31-icon {
+    top: 6.88rem;
+    left: 41.13rem;
+    width: 7.69rem;
+    height: 7.63rem;
+  }
+  .textos-item {
+    position: absolute;
+    top: 26.31rem;
+    left: 0;
+    border-radius: 44px;
+    background-color: var(--azulroxoclaro);
+    width: 90rem;
+    height: 76.06rem;
+  }
+  .rectangle-div,
+  .textos-inner {
+    position: absolute;
+    top: 52.88rem;
+    left: 5.69rem;
+    border-radius: var(--br-8xl);
+    background-color: var(--rosa);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--cinzaroxo);
+    box-sizing: border-box;
+    width: 34.94rem;
+    height: 9.25rem;
+  }
+  .rectangle-div {
+    left: 49.75rem;
+  }
+  .alfabtica,
+  .ordem,
+  .salvamento {
+    position: absolute;
+    color: var(--color-dimgray);
+    display: inline-block;
+  }
+  .ordem {
+    top: 28.88rem;
+    left: 3.44rem;
+    font-size: 2rem;
+    width: 9.94rem;
+    height: 2.25rem;
+  }
+  .alfabtica,
+  .salvamento {
+    top: 33.19rem;
+    left: 6.13rem;
+    font-size: var(--font-size-xl);
+    width: 13.31rem;
+    height: 1.75rem;
+  }
+  .salvamento {
+    left: 17rem;
+  }
+  .textos-child1 {
+    position: absolute;
+    top: 40rem;
+    left: 5.31rem;
+    border-radius: var(--br-8xl);
+    background-color: var(--rosa);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--cinzaroxo);
+    box-sizing: border-box;
+    width: 35.69rem;
+    height: 9.25rem;
+  }
+  .textos-child2 {
+    top: 33.56rem;
+    left: 4.69rem;
+    border-radius: var(--br-2xl);
+    border: 1px solid var(--color-gray);
+    box-sizing: border-box;
+    width: 0.94rem;
+    height: 1rem;
+  }
+  .textos-child2,
+  .textos-child3,
+  .textos-child4 {
+    position: absolute;
+    background-color: var(--rosa);
+  }
+  .textos-child3 {
+    top: 33.56rem;
+    left: 15.44rem;
+    border-radius: var(--br-2xl);
+    border: 1px solid var(--color-gray);
+    box-sizing: border-box;
+    width: 0.94rem;
+    height: 1rem;
+  }
+  .textos-child4 {
+    top: 37rem;
+    left: 0;
+    width: 93.38rem;
+    height: 0.25rem;
+  }
+  .matemtica {
+    margin: 0;
+  }
+  .funes-lineares {
+    margin: 0;
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+  }
+  .matemtica- {
+    position: absolute;
+    top: 40.81rem;
+    left: 21.75rem;
+    display: inline-block;
+    width: 13.25rem;
+    height: 7rem;
+  }
+  .textos-child5 {
+    position: absolute;
+    top: 66.25rem;
+    left: 5.31rem;
+    border-radius: var(--br-8xl);
+    background-color: var(--rosa);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--cinzaroxo);
+    box-sizing: border-box;
+    width: 34.94rem;
+    height: 9.25rem;
+  }
+  .biologia-,
+  .portugus- {
+    position: absolute;
+    top: 66.88rem;
+    left: 21.75rem;
+    display: inline-block;
+    width: 13.25rem;
+    height: 7rem;
+  }
+  .portugus- {
+    top: 53.69rem;
+  }
+  .image-26-icon {
+    position: absolute;
+    top: 41.38rem;
+    left: 9.25rem;
+    width: 6.5rem;
+    height: 6.5rem;
+    object-fit: cover;
+  }
+  .textos-child6 {
+    position: absolute;
+    top: 39.69rem;
+    left: 49.75rem;
+    border-radius: var(--br-8xl);
+    background-color: var(--rosa);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--cinzaroxo);
+    box-sizing: border-box;
+    width: 34.94rem;
+    height: 9.25rem;
+  }
+  .geografia- {
+    position: absolute;
+    top: 40.81rem;
+    left: 66.13rem;
+    display: inline-block;
+    width: 13.25rem;
+    height: 7rem;
+  }
+  .image-28-icon,
+  .image-29-icon,
+  .image-30-icon {
+    position: absolute;
+    top: 40.5rem;
+    left: 54.88rem;
+    border-radius: 23px;
+    width: 5.38rem;
+    height: 7.56rem;
+    object-fit: cover;
+  }
+  .image-29-icon,
+  .image-30-icon {
+    top: 67.13rem;
+    left: 9.94rem;
+    border-radius: 24px;
+    width: 5.06rem;
+  }
+  .image-30-icon {
+    top: 53.75rem;
+    left: 9.75rem;
+    border-radius: 18px;
+    width: 5.5rem;
+  }
+  .ingls- {
+    position: absolute;
+    top: 53.69rem;
+    left: 66.13rem;
+    display: inline-block;
+    width: 13.25rem;
+  }
+  .image-24-icon {
+    position: absolute;
+    top: 54.31rem;
+    left: 54.38rem;
+    width: 6.31rem;
+    height: 6.31rem;
+    object-fit: cover;
+  }
+  .textos {
+    position: relative;
+    background-color: var(--rosa);
+    width: 100%;
+    height: 84.5rem;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-mini);
+    color: var(--color-black);
   }
   
-  button:hover {
-    background-color: var(--secondary-color-light);
-    border: 2px solid var(--secondary-color-light);
-  }
+  
+  
+  
   
