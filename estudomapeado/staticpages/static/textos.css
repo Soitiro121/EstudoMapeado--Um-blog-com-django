@@ -1,85 +1,35 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
 :root {
-    
-    --secondary-color: #118bee;
-    --tertiary-color: #f44d27;
-    --secondary-color-light: #30b2ff;
-    --tertiary-color-light: #ff6d28;
-    --bg-color: #fff;
-    --secondary-bg-color: #e9e9e9;
-    --color-shadow: #f4f4f4;
-    
-    /* fonts */
-    --font-kaisei-opti: "Kaisei Opti";
+  /* fonts */
+  --font-kaisei-opti: "Kaisei Opti";
 
-    /* font sizes */
-    --font-size-mini: 0.94rem;
-    --font-size-xl: 1.25rem;
+  /* font sizes */
+  --font-size-mini: 0.94rem;
+  --font-size-xl: 1.25rem;
 
-    /* Colors */
-    --rosa: #fd8686;
-    --color-black: #000;
-    --cinzaroxo: #8f99bb;
-    --color-gray: rgba(0, 0, 0, 0.28);
-    --color-dimgray: #5a5353;
-    --azulroxoclaro: #cde6f3;
+  /* Colors */
+  --rosa: #fd8686;
+  --color-black: #000;
+  --cinzaroxo: #8f99bb;
+  --color-gray: rgba(0, 0, 0, 0.28);
+  --color-dimgray: #5a5353;
+  --azulroxoclaro: #cde6f3;
 
-    /* Border radiuses */
-    --br-8xl: 27px;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    height: 100%;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  
-  .lista-de-cards {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    border: 1px solid var(--rosa);
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px #ed7e7e;
-    margin: 1rem;
-    padding: 1.25rem;
-    width: 285px;
-  }
-  
-  .small-card {
-    border: 1px solid var(--secondary-bg-color);
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px var(--color-shadow);
-    margin: 1rem;
-    padding: 1.25rem;
-    width: 160px;
-  }
-  
-  .card img {
-    width: 100%;
-  }
-  
-  .small-card img {
-    width: 100%;
-  }
-  
-  
+  /* Border radiuses */
+  --br-8xl: 27px;
+  --br-2xl: 21px;
+}
+
   .logo-icon {
     position: absolute;
-    top: 3.25rem;
-    left: 79.38rem;
-    width: 7.94rem;
-    height: 7.44rem;
+    top: 2rem;
+    left: 93%;
+    width: 8.5%;
+    transform: translateX(-50%);
     object-fit: cover;
   }
   .image-25,
@@ -133,7 +83,7 @@
   }
   .image-31-icon {
     top: 6.88rem;
-    left: 41.13rem;
+    left: 48%;
     width: 7.69rem;
     height: 7.63rem;
   }
@@ -143,7 +93,7 @@
     left: 0;
     border-radius: 44px;
     background-color: var(--azulroxoclaro);
-    width: 90rem;
+    width: 100%;
     height: 76.06rem;
   }
   .rectangle-div,
@@ -257,18 +207,7 @@
     width: 34.94rem;
     height: 9.25rem;
   }
-  .biologia-,
-  .portugus- {
-    position: absolute;
-    top: 66.88rem;
-    left: 21.75rem;
-    display: inline-block;
-    width: 13.25rem;
-    height: 7rem;
-  }
-  .portugus- {
-    top: 53.69rem;
-  }
+  
   .image-26-icon {
     position: absolute;
     top: 41.38rem;
@@ -289,53 +228,7 @@
     width: 34.94rem;
     height: 9.25rem;
   }
-  .geografia- {
-    position: absolute;
-    top: 40.81rem;
-    left: 66.13rem;
-    display: inline-block;
-    width: 13.25rem;
-    height: 7rem;
-  }
-  .image-28-icon,
-  .image-29-icon,
-  .image-30-icon {
-    position: absolute;
-    top: 40.5rem;
-    left: 54.88rem;
-    border-radius: 23px;
-    width: 5.38rem;
-    height: 7.56rem;
-    object-fit: cover;
-  }
-  .image-29-icon,
-  .image-30-icon {
-    top: 67.13rem;
-    left: 9.94rem;
-    border-radius: 24px;
-    width: 5.06rem;
-  }
-  .image-30-icon {
-    top: 53.75rem;
-    left: 9.75rem;
-    border-radius: 18px;
-    width: 5.5rem;
-  }
-  .ingls- {
-    position: absolute;
-    top: 53.69rem;
-    left: 66.13rem;
-    display: inline-block;
-    width: 13.25rem;
-  }
-  .image-24-icon {
-    position: absolute;
-    top: 54.31rem;
-    left: 54.38rem;
-    width: 6.31rem;
-    height: 6.31rem;
-    object-fit: cover;
-  }
+  
   .textos {
     position: relative;
     background-color: var(--rosa);
@@ -345,9 +238,37 @@
     text-align: left;
     font-size: var(--font-size-mini);
     color: var(--color-black);
+    font-family: var(--font-kaisei-opti);
+  }
+
+  .lista-de-cards {
+    display: flex;
+    flex-wrap: wrap;
   }
   
+  .card {
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px var(--color-shadow);
+    margin: 1rem;
+    padding: 1.25rem;
+    width: 285px;
+  }
   
+  .small-card {
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px var(--color-shadow);
+    margin: 1rem;
+    padding: 1.25rem;
+    width: 160px;
+  }
   
+  .card img {
+    width: 100%;
+  }
   
+  .small-card img {
+    width: 100%;
+  }
   
