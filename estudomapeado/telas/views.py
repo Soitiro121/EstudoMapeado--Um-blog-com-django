@@ -113,3 +113,7 @@ def termos(request):
 def sucesso(request):
     return render(request, 'sucesso.html')
 
+def list_textos(request):
+    texto_list = Texto.objects.all()
+    context = {'texto_list': texto_list}
+    return render(request, 'textos.html', context)

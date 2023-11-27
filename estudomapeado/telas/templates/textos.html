@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <h2>Todos os Filmes</h2>
+    
+    {% if texto_list %}
+        <section class="lista-de-cards">
+            {% for texto in texto_list %}
+                <article class="card">
+                    
+                    <img src="{{ texto.link }}"/>
+                    
+                    <p>{{ texto.title }} ({{ texto.created_on }})</p>
+                </article>
+            {% endfor %}
+        </section>
+    {% else %}
+        <p>Não foi encontrado nenhum filme.</p>
+    {% endif %}
+
+
+</html>
