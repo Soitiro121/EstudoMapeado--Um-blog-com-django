@@ -117,3 +117,8 @@ def list_textos(request):
     texto_list = Texto.objects.all()
     context = {'texto_list': texto_list}
     return render(request, 'textos.html', context)
+
+def list_videos(request):
+    video_list = Video.objects.all()
+    context = {'video_list': video_list}
+    return render(request, 'videos.html', context)

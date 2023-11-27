@@ -14,4 +14,5 @@ urlpatterns = [
     path('termos/', views.termos, name='termos'),
     path('sucesso/', views.sucesso, name='sucesso'),
     path('textos/', views.list_textos, name='textos'),
+    path('videos/', views.list_videos, name='videos'),
 ]
