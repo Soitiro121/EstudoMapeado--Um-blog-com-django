@@ -19,7 +19,10 @@
 </head>
 <body>
   <div class="login">
-    <form method="post" action="{% url 'login' %}"> <!-- Substitua 'login' pela sua URL de login -->
+      {% if form.errors %}
+        <p>Seu nome de usuário e senha não coincidem. Por favor, tente novamente.</p>
+      {% endif %}
+    <form method="post" action="{% url 'login' %}">
       {% csrf_token %}
       <input class="login-child" name="username" type="text" placeholder="Usuário" />
       <input class="rectangle-input" name="password" type="password" placeholder="Senha" />

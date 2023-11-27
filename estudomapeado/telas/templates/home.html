@@ -1,0 +1,29 @@
+<!-- home.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Cabeçalho e links para CSS -->
+</head>
+<body>
+    <h1>Bem-vindo à Home</h1>
+
+    {% if is_aluno %}
+    <div>
+        <p>Conteúdo exclusivo para alunos.</p>
+    </div>
+    {% endif %}
+
+    {% if is_professor %}
+    <div>
+        <p>Conteúdo exclusivo para professores.</p>
+    </div>
+    {% endif %}
+
+    <div>
+        <p>Conteúdo disponível para todos os usuários.</p>
+    </div>
+
+</body>
+</html>

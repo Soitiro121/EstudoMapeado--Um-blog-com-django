@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="conserto do template termos de uso">
-      <change afterPath="$PROJECT_DIR$/estudomapeado/staticpages/templates/base_altera_confirma.html" afterDir="false" />
+    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="Ajustes de localizacao">
+      <change afterPath="$PROJECT_DIR$/estudomapeado/telas/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudomapeado/staticpages/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/staticpages/static/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/estudomapeado/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/estudomapeado/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/templates/cria_conta.html" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/templates/cria_conta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +126,7 @@
       <workItem from="1700762043367" duration="1808000" />
       <workItem from="1700778086066" duration="2198000" />
       <workItem from="1700862700873" duration="15165000" />
+      <workItem from="1701116729376" duration="8470000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />

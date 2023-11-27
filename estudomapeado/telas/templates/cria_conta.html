@@ -34,13 +34,13 @@
       </a>
       
 
-      <label for="checkbox-estudante" class="checkbox-label1">
-        <input id="checkbox-estudante" class="checkbox-estudante" type="checkbox" name="userTypeEstudante" />
+      <label for="radio-estudante" class="radio-label1">
+        <input id="checkbox-estudante" class="checkbox-estudante" type="radio" name="userType" value="Estudante" />
         Estudante
       </label>
 
-      <label for="checkbox-professor" class="checkbox-label2">
-        <input id="checkbox-professor" class="checkbox-professor" type="checkbox" name="userTypeProfessor" />
+      <label for="radio-professor-professor" class="radio-label2">
+        <input id="radio-professor" class="radio-professor" type="radio" name="userType" value="Professor" />
         Professor
       </label>
 
@@ -50,7 +50,7 @@
         Li e concordo com os
         <a href="{% url 'termos' %}" class="termos-de-uso">Termos de uso</a>
       </div>
-      <input class="cadastro-child3" type="checkbox" />
+      <input class="cadastro-child3" type="radio" />
     </div>
   </body>
 </html>
