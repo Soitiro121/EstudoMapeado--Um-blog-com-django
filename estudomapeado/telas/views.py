@@ -92,3 +92,8 @@ def list_videos(request):
     video_list = Video.objects.all()
     context = {'video_list': video_list}
     return render(request, 'videos.html', context)
+
+def list_video(request):
+    video_list = Video.objects.all()
+    context = {'video_list': video_list}
+    return render(request, 'video.html', context)

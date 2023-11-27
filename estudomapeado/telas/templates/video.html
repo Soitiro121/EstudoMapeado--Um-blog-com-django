@@ -6,37 +6,37 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="{% static 'textos.css' %}" />
+    <link rel="stylesheet" href="{% static 'videos.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500;700&display=swap"
     />
   </head>
   <body>
-    <div class="textos">
+    <div class="videos">
       <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
 
       
-      <b class="textos1">Textos</b>
+      <b class="videos1">Vídeos</b>
       <b class="sumrio">Sumário</b>
       <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
 
-      <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
+      <img class="image-8-icon" alt="" src="{% static 'image-8@2x.png' %}" />
 
-      <div class="textos-item"></div>
-      {% if texto_list %}
+      <div class="videos-item"></div>
+      {% if video_list %}
             <section class="lista-de-cards">
-                {% for texto in texto_list %}
+                {% for video in video_list %}
                     <article class="card">
                         
-                      <img src="{{ texto.link }}"/>
+                        <img src="{{ video.link }}"/>
                         
-                      <p>{{ texto.title }} ({{ texto.categories.name }})</p>
+                        <p>{{ video.title }} ({{ video.created_on }})</p>
                     </article>
                 {% endfor %}
             </section>
         {% else %}
-            <p>Não foi encontrado nenhum texto.</p>
+            <p>Não foi encontrado nenhum video.</p>
         {% endif %}
     </div>
   </body>
