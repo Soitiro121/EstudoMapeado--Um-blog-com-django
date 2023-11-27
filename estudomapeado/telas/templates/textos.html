@@ -19,9 +19,9 @@
       
       <b class="textos1">Textos</b>
       <b class="sumrio">Sumário</b>
-      <img class="image-20-icon" alt="" src="./public/image-20@2x.png" />
+      <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
 
-      <img class="image-31-icon" alt="" src="./public/image-31@2x.png" />
+      <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
 
       <div class="textos-item"></div>
       {% if texto_list %}
@@ -29,9 +29,9 @@
                 {% for texto in texto_list %}
                     <article class="card">
                         
-                        <img src="{{ texto.link }}"/>
+                      <img src="{{ texto.link }}"/>
                         
-                        <p>{{ texto.title }} ({{ texto.created_on }})</p>
+                        <p>{{ texto.title }} ({{ texto.categories.name }})</p>
                     </article>
                 {% endfor %}
             </section>
