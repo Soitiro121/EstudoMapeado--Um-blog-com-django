@@ -24,7 +24,8 @@ class Texto(models.Model):
 # novamente mudança do nome para ficar mais facil a referenciação
     def __str__(self):
         return self.title
-    
+
+
 class Video(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
@@ -33,7 +34,6 @@ class Video(models.Model):
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField("Category", related_name="videos")
     
-
 
 class ForumMessage(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
