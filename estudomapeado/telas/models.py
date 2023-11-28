@@ -2,12 +2,23 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-class Category(models.Model):
+class CategoryTexto(models.Model):
     name = models.CharField(max_length=30)
 
 # Fazendo a mudança do nome na pagina do admin
     class Meta:
-        verbose_name_plural = "categories"
+        verbose_name_plural = "CategoriasTexto"
+
+    def __str__(self):
+        return self.name
+
+
+class CategoryVideo(models.Model):
+    name = models.CharField(max_length=30)
+
+# Fazendo a mudança do nome na pagina do admin
+    class Meta:
+        verbose_name_plural = "CategoriasVideo"
 
     def __str__(self):
         return self.name
@@ -18,8 +29,7 @@ class Texto(models.Model):
     body = models.TextField()
     link = models.URLField(max_length=200, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    last_modified = models.DateTimeField(auto_now=True)
-    categories = models.ManyToManyField("Category", related_name="textos")
+    categories = models.ManyToManyField("CategoryTexto", related_name="textos")
 
 # novamente mudança do nome para ficar mais facil a referenciação
     def __str__(self):
@@ -32,7 +42,7 @@ class Video(models.Model):
     link = models.URLField(max_length=200, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-    categories = models.ManyToManyField("Category", related_name="videos")
+    categories = models.ManyToManyField("CategoryVideo", related_name="videos")
     
 
 class ForumMessage(models.Model):
