@@ -9,6 +9,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class TextoAdmin(admin.ModelAdmin):
     pass
 
+
 class VideoAdmin(admin.ModelAdmin):
     pass
 

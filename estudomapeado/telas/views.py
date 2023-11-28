@@ -4,7 +4,6 @@ from django.contrib import messages
 from . models import *
 from django.contrib.auth.models import User, Group
 from django.shortcuts import render, redirect
-from django.db import IntegrityError
 
 
 def cria_conta(request):
@@ -16,7 +15,7 @@ def cria_conta(request):
         tipo_usuario = request.POST.get('userType')
 
         if senha != confirmacao_senha:
-            # Adicionar mensagem de erro
+            print("Senha incorreta")
             return render(request, 'cria_conta.html', {'error': 'As senhas não coincidem'})
 
         try:
@@ -32,7 +31,7 @@ def cria_conta(request):
             group, _ = Group.objects.get_or_create(name=group_name)
             user.groups.add(group)
 
-            return redirect('login')  # Substitua 'login' pelo nome da sua URL de login
+            return redirect('login')
 
         except Exception as e:
             # Log a exceção ou informe ao usuário
