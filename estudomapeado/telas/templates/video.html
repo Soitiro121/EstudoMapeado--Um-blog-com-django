@@ -24,14 +24,14 @@
       <img class="image-8-icon" alt="" src="{% static 'image-8@2x.png' %}" />
 
       <div class="videos-item"></div>
-      {% if video_list %}
+      {% if list_videos %}
             <section class="lista-de-cards">
-                {% for video in video_list %}
+                {% for video in list_videos %}
                     <article class="card">
                         
                         <img src="{{ video.link }}"/>
                         
-                        <p>{{ video.title }} ({{ video.created_on }})</p>
+                        <h4>{{ video.title }} ({{ video.created_on }})</h4>
                     </article>
                 {% endfor %}
             </section>

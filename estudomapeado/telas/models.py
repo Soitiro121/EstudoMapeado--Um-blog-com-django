@@ -27,7 +27,6 @@ class CategoryVideo(models.Model):
 class Texto(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
-    link = models.URLField(max_length=200, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     categories = models.ManyToManyField("CategoryTexto", related_name="textos")
 
