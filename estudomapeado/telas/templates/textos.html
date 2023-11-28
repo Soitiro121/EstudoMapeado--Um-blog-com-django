@@ -32,8 +32,11 @@
             <section class="lista-de-cards">
                 {% for texto in textos %}
                     <article class="card">
-                        <p>{{ texto.title }} ({{ texto.categories.name }})</p>
-                        <p>{{ texto.preview }}...</p>
+
+                      <img src="{{ texto.link }}"/>
+                        <p>{{ texto.categories }}</p>
+                        <p>{{ texto.title }} ({{ texto.created_on }})</p>
+                        <p>{{ texto.body }}</p>
                     </article>
                 {% endfor %}
             </section>
