@@ -12,36 +12,32 @@ def cria_conta(request):
         nome_completo = request.POST.get('nome_completo')
         email = request.POST.get('email')
         senha = request.POST.get('senha')
-        confirmacao_senha = request.POST.get('confirmacao_da_senha')
-        tipo_usuario = request.POST.get('userType')  # Assume que 'userType' é um único valor
+        confirmacao_senha = request.POST.get('confirmacao_senha')
+        tipo_usuario = request.POST.get('userType')
 
-        if senha == confirmacao_senha:
-            try:
-                # Criar novo usuário
-                user = User.objects.create_user(
-                    username=email,
-                    email=email,
-                    password=senha,
-                    first_name=nome_completo.split(' ')[0],
-                    last_name=' '.join(nome_completo.split(' ')[1:])
-                )
+        if senha != confirmacao_senha:
+            # Adicionar mensagem de erro
+            return render(request, 'cria_conta.html', {'error': 'As senhas não coincidem'})
 
-                # Determinar o grupo com base no tipo de usuário
-                group_name = 'Estudante' if tipo_usuario == 'Estudante' else 'Professor'
-                group, created = Group.objects.get_or_create(name=group_name)
-                user.groups.add(group)
+        try:
+            user = User.objects.create_user(
+                username=email,
+                email=email,
+                password=senha,
+                first_name=nome_completo.split(' ')[0],
+                last_name=' '.join(nome_completo.split(' ')[1:])
+            )
 
-                # Redirecionar para a página de login
-                return redirect('login')
-            except IntegrityError:
-                # Tratar o caso de e-mail já utilizado
-                # Você pode adicionar uma mensagem de erro para informar ao usuário
-                pass
-            except Exception as e:
-                # Outros erros: logar ou informar ao usuário
-                print("Erro ao criar o usuário:", e)
+            group_name = 'Estudante' if tipo_usuario == 'Estudante' else 'Professor'
+            group, _ = Group.objects.get_or_create(name=group_name)
+            user.groups.add(group)
 
-    # Renderizar formulário de cadastro para método GET
+            return redirect('login')  # Substitua 'login' pelo nome da sua URL de login
+
+        except Exception as e:
+            # Log a exceção ou informe ao usuário
+            return render(request, 'cria_conta.html', {'error': str(e)})
+
     return render(request, 'cria_conta.html')
 
 

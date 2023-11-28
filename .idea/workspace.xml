@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="- Inclusao de grupos no models&#10;- nova funçao criar conta">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="remoçao do dbsqlite3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/templates/cria_conta.html" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/templates/cria_conta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/douol/SisInfoEM&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/douol/EstudoMapeado--Um-blog-com-django/estudomapeado&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -73,6 +76,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\douol\EstudoMapeado--Um-blog-com-django\estudomapeado" />
       <recent name="C:\Users\douol\SisInfoEM\blog\static\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -122,6 +126,7 @@
       <workItem from="1700778086066" duration="2198000" />
       <workItem from="1700862700873" duration="15165000" />
       <workItem from="1701116729376" duration="8776000" />
+      <workItem from="1701134197034" duration="1833000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -451,7 +456,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701133332960</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="remoçao do dbsqlite3">
+      <option name="closed" value="true" />
+      <created>1701134007081</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1701134007081</updated>
+    </task>
+    <task id="LOCAL-00043" summary="remoçao do dbsqlite3">
+      <option name="closed" value="true" />
+      <created>1701134037392</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1701134037392</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aplicação do filtro safe" />
     <MESSAGE value="reaplicação de estilo" />
     <MESSAGE value="adição das funções de criar e editar postagem" />
     <MESSAGE value="modificação para assimilação de múltiplas categorias" />
@@ -526,7 +546,8 @@
     <MESSAGE value="Ajustes no login&#10;- necessario ajuste em cria_conta (formatação de página)" />
     <MESSAGE value="- Inclusao de Logout em home&#10;- alteraçoes para ajuste do css" />
     <MESSAGE value="- Inclusao de grupos no models&#10;- nova funçao criar conta" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Inclusao de grupos no models&#10;- nova funçao criar conta" />
+    <MESSAGE value="remoçao do dbsqlite3" />
+    <option name="LAST_COMMIT_MESSAGE" value="remoçao do dbsqlite3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SisInfoEM$main.coverage" NAME="main Coverage Results" MODIFIED="1700587175318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

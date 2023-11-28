@@ -1,56 +1,34 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
     <link rel="stylesheet" href="{% static 'cria_conta.css' %}" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500&display=swap"
-    />
-  </head>
-  <body>
+    <!-- Inclua aqui outros links de CSS ou JS, se necessário -->
+</head>
+<body>
     <div class="cadastro">
+        <form method="post" action="{% url 'cria_conta' %}">
+            {% csrf_token %}
+            <input class="cadastro-child" name="nome_completo" type="text" placeholder="Nome completo" required />
+            <input class="cadastro-item" name="email" type="email" placeholder="E-mail" required />
+            <input class="cadastro-inner" name="senha" type="password" placeholder="Senha" required />
+            <input class="rectangle-input" name="confirmacao_senha" type="password" placeholder="Confirmação da senha" required />
 
-      
+            <label for="radio-estudante">
+                <input id="radio-estudante" type="radio" name="userType" value="Estudante" required />
+                Estudante
+            </label>
 
-      <input class="cadastro-child" type="text" placeholder="Nome completo" />
-      <input class="cadastro-item" type="text" placeholder="E-mail" />
-      <input class="cadastro-inner" type="password" placeholder="Senha" />
-      <input class="rectangle-input" type="password" placeholder="Confirmação da senha" />
+            <label for="radio-professor">
+                <input id="radio-professor" type="radio" name="userType" value="Professor" required />
+                Professor
+            </label>
 
-      <img class="logo-icon" src="{% static 'logo@2x.png' %}" alt="Logo da Empresa"/>
-
-      <div class="nome_completo">Nome completo</div>
-      <div class="email">E-mail</div>
-      <div class="senha">Senha</div>
-      <div class="confirmao_da_senha">Confirmação da senha</div>
-
-      <a href="{% url 'login' %}"><button class="image-6" id="menu_button"></button></a>
-      <a href="{% url 'sucesso' %}">
-        <button class="rectangle-button">Enviar e-mail de confirmação</button>
-      </a>
-      
-
-      <label for="radio-estudante" class="radio-label1">
-        <input id="radio-estudante" class="radio-estudante" type="radio" name="userType" value="Estudante" />
-        Estudante
-      </label>
-
-      <label for="radio-professor-professor" class="radio-label2">
-        <input id="radio-professor" class="radio-professor" type="radio" name="userType" value="Professor" />
-        Professor
-      </label>
-
-      
-
-      <div class="li-e-concordo-container">
-        Li e concordo com os
-        <a href="{% url 'termos' %}" class="termos-de-uso">Termos de uso</a>
-      </div>
-      <input class="cadastro-child3" type="radio" />
+            <button class="rectangle-button" type="submit">Criar Conta</button>
+        </form>
     </div>
-  </body>
+</body>
 </html>
