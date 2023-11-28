@@ -97,3 +97,14 @@ def list_video(request):
     video_list = Video.objects.all()
     context = {'video_list': video_list}
     return render(request, 'video.html', context)
+
+def search_videos(request):
+    context = {}
+    if request.GET.get('query', False):
+        context = {
+            "movie_list": [
+                m for m in video_data
+                if request.GET['query'].lower() in m['name'].lower()
+            ]
+        }
+    return render(request, 'videos/index.html', context)
