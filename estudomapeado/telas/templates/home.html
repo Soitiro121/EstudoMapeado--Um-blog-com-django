@@ -9,7 +9,7 @@
 <body>
     <h1>Bem-vindo à Home</h1>
 
-    {% if is_aluno %}
+    {% if is_estudante %}
     <div>
         <p>Conteúdo exclusivo para alunos.</p>
     </div>
@@ -24,6 +24,6 @@
     <div>
         <p>Conteúdo disponível para todos os usuários.</p>
     </div>
-
+    <a href="{% url 'logout' %}">Logout</a>
 </body>
 </html>

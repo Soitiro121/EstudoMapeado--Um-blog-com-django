@@ -13,5 +13,6 @@ urlpatterns = [
     path('textos/', views.list_textos, name='textos'),
     path('home/', views.home, name='home'),
     path('videos/', views.list_videos, name='videos'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
     path('video/', views.list_video, name='video'),
 ]
