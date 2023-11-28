@@ -1,7 +1,7 @@
 from rest_framework import generics
 
-from telas.models import Texto, Video
-from .serializers import TextoSerializer, VideoSerializer
+from telas.models import Texto, Video, ForumMessage
+from .serializers import TextoSerializer, VideoSerializer, ForumMessageSerializer
 
 
 class TextoList(generics.ListCreateAPIView):
@@ -20,3 +20,11 @@ class VideoList(generics.ListCreateAPIView):
 class VideoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Video.objects.all()
     serializer_class = VideoSerializer
+
+class ForumMessageList(generics.ListCreateAPIView):
+    queryset = ForumMessage.objects.all()
+    serializer_class = ForumMessageSerializer
+    
+class ForumMessageDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ForumMessage.objects.all()
+    serializer_class = ForumMessageSerializer

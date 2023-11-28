@@ -35,12 +35,7 @@ class Video(models.Model):
     
 
 
-class Comment(models.Model):
-    author = models.CharField(max_length=60)
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    texto = models.ForeignKey("Texto", on_delete=models.CASCADE)
-
-# apenas mudança de nome
-    def __str__(self):
-        return f"{self.author} on '{self.post}'"
+class ForumMessage(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    message = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Comment, Texto, Video
+from .models import Category, ForumMessage, Texto, Video
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -13,11 +13,11 @@ class VideoAdmin(admin.ModelAdmin):
     pass
 
 
-class CommentAdmin(admin.ModelAdmin):
+class ForumMessageAdmin(admin.ModelAdmin):
     pass
 
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Texto, TextoAdmin)
 admin.site.register(Video, VideoAdmin)
-admin.site.register(Comment, CommentAdmin)
+admin.site.register(ForumMessage, ForumMessageAdmin)
