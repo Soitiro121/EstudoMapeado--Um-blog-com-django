@@ -16,22 +16,17 @@
     <div class="textos">
       <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
 
-      
       <b class="textos1">Textos</b>
       <b class="sumrio">Sumário</b>
       <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
-
       <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
 
       <div class="textos-item"></div>
-      {% if texto_list %}
+      {% if textos %}
             <section class="lista-de-cards">
-                {% for texto in texto_list %}
+                {% for texto in textos %}
                     <article class="card">
-                        
-                      <img src="{{ texto.link }}"/>
-                        
-                      <p>{{ texto.title }} ({{ texto.categories.name }})</p>
+                        <p>{{ texto.title }} ({{ texto.categories.name }})</p>
                     </article>
                 {% endfor %}
             </section>
@@ -41,4 +36,3 @@
     </div>
   </body>
 </html>
-

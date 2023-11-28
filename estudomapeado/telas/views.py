@@ -78,8 +78,8 @@ def sucesso(request):
 
 @login_required
 def list_textos(request):
-    texto_list = Texto.objects.all()
-    context = {'texto_list': texto_list}
+    textos = Texto.objects.all()
+    context = {'textos': textos}
     return render(request, 'textos.html', context)
 
 
