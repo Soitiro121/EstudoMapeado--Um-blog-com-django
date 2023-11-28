@@ -14,5 +14,4 @@ urlpatterns = [
     path('home/', views.home, name='home'),
     path('videos/', views.list_videos, name='videos'),
     path('video/', views.list_video, name='video'),
-    path('search/', views.search_videos, name='search'),
 ]
