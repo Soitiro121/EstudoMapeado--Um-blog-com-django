@@ -13,13 +13,19 @@
     />
   </head>
   <body>
+    {% if user.is_authenticated %}
     <div class="textos">
       <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+
+    {% if is_professor %}
+        <a href="cria_texto.html" class="sumrio">Criar Texto </a>
+    {% endif %}
 
       <b class="textos1">Textos</b>
       <b class="sumrio">Sumário</b>
       <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
       <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
+
 
       <div class="textos-item"></div>
       {% if textos %}
@@ -27,6 +33,7 @@
                 {% for texto in textos %}
                     <article class="card">
                         <p>{{ texto.title }} ({{ texto.categories.name }})</p>
+                        <p>{{ texto.preview }}...</p>
                     </article>
                 {% endfor %}
             </section>
@@ -34,5 +41,8 @@
             <p>Não foi encontrado nenhum texto.</p>
         {% endif %}
     </div>
+      {% else %}
+      <p>Você precisa estar logado para ver esta página.</p>
+      {% endif %}
   </body>
 </html>
