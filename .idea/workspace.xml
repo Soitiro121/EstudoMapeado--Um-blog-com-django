@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="- modificações">
+    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="- Ajuste da view cria_conta&#10;- Ajuste da template cria conta (necessita revisao front end)&#10;- Teste com home concluído, observar lógica de grupos no template Home">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/templates/cria_conta.html" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/templates/cria_conta.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +122,7 @@
       <workItem from="1700778086066" duration="2198000" />
       <workItem from="1700862700873" duration="15165000" />
       <workItem from="1701116729376" duration="8776000" />
-      <workItem from="1701134197034" duration="3237000" />
+      <workItem from="1701134197034" duration="2586000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -477,15 +476,7 @@
       <option name="project" value="LOCAL" />
       <updated>1701136184641</updated>
     </task>
-    <task id="LOCAL-00045" summary="- modificações">
-      <option name="closed" value="true" />
-      <created>1701140391703</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1701140391703</updated>
-    </task>
-    <option name="localTasksCounter" value="46" />
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,6 +526,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="adição das funções de criar e editar postagem" />
     <MESSAGE value="modificação para assimilação de múltiplas categorias" />
     <MESSAGE value="Item 3: views com as classes genéricas ListView, DetailView, CreateView, UpdateView e DeleteView;" />
     <MESSAGE value="Atualização da base para mostrar pagina com lista das categorias" />
@@ -559,8 +551,7 @@
     <MESSAGE value="- Inclusao de grupos no models&#10;- nova funçao criar conta" />
     <MESSAGE value="remoçao do dbsqlite3" />
     <MESSAGE value="- Ajuste da view cria_conta&#10;- Ajuste da template cria conta (necessita revisao front end)&#10;- Teste com home concluído, observar lógica de grupos no template Home" />
-    <MESSAGE value="- modificações" />
-    <option name="LAST_COMMIT_MESSAGE" value="- modificações" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Ajuste da view cria_conta&#10;- Ajuste da template cria conta (necessita revisao front end)&#10;- Teste com home concluído, observar lógica de grupos no template Home" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SisInfoEM$main.coverage" NAME="main Coverage Results" MODIFIED="1700587175318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
