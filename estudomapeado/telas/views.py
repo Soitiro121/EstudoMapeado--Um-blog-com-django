@@ -1,21 +1,20 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import Group
 from django.contrib.auth.hashers import make_password
-from django.shortcuts import render, redirect
 from django.contrib import messages
 from . models import *
+from django.contrib.auth.models import User, Group
+from django.shortcuts import render, redirect
+from django.db import IntegrityError
 
 
 def cria_conta(request):
     if request.method == 'POST':
-        # Obter dados do formulário
         nome_completo = request.POST.get('nome_completo')
-        email = request.POST.get('email')  # Corrigido o nome do campo
+        email = request.POST.get('email')
         senha = request.POST.get('senha')
-        confirmacao_senha = request.POST.get('confirmacao_da_senha')  # Corrigido o nome do campo
-        tipos_usuario = request.POST.get('userType')  # Retorna uma lista com os valores marcados
+        confirmacao_senha = request.POST.get('confirmacao_da_senha')
+        tipo_usuario = request.POST.get('userType')  # Assume que 'userType' é um único valor
 
-        # Validação básica
         if senha == confirmacao_senha:
             try:
                 # Criar novo usuário
@@ -27,19 +26,20 @@ def cria_conta(request):
                     last_name=' '.join(nome_completo.split(' ')[1:])
                 )
 
-                # Adicionar usuário aos grupos correspondentes
-                for tipo_usuario in tipos_usuario:
-                    group_name = 'Estudante' if tipo_usuario == 'Estudante' else 'Professor'
-                    group, _ = Group.objects.get_or_create(name=group_name)
-                    user.groups.add(group)
+                # Determinar o grupo com base no tipo de usuário
+                group_name = 'Estudante' if tipo_usuario == 'Estudante' else 'Professor'
+                group, created = Group.objects.get_or_create(name=group_name)
+                user.groups.add(group)
 
                 # Redirecionar para a página de login
                 return redirect('login')
-
+            except IntegrityError:
+                # Tratar o caso de e-mail já utilizado
+                # Você pode adicionar uma mensagem de erro para informar ao usuário
+                pass
             except Exception as e:
-                # Log a exceção ou informe ao usuário
-                print("Erro ao criar o usuário:", e)# Exemplo básico
-
+                # Outros erros: logar ou informar ao usuário
+                print("Erro ao criar o usuário:", e)
 
     # Renderizar formulário de cadastro para método GET
     return render(request, 'cria_conta.html')
@@ -50,8 +50,6 @@ def home(request):
     context = {'is_estudante': request.user.groups.filter(name='Estudante').exists(),
                'is_professor': request.user.groups.filter(name='Professor').exists()}
     return render(request, 'home.html', context)
-
-
 
 
 def altera_senha(request):
@@ -80,18 +78,22 @@ def altera_senha(request):
 def termos(request):
     return render(request, 'termos.html')
 
+
 def sucesso(request):
     return render(request, 'sucesso.html')
+
 
 def list_textos(request):
     texto_list = Texto.objects.all()
     context = {'texto_list': texto_list}
     return render(request, 'textos.html', context)
 
+
 def list_videos(request):
     video_list = Video.objects.all()
     context = {'video_list': video_list}
     return render(request, 'videos.html', context)
+
 
 def list_video(request):
     video_list = Video.objects.all()

@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.contrib.auth.models import Group
 
 
 class Category(models.Model):
@@ -24,7 +25,8 @@ class Texto(models.Model):
 # novamente mudança do nome para ficar mais facil a referenciação
     def __str__(self):
         return self.title
-    
+
+
 class Video(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
@@ -33,7 +35,6 @@ class Video(models.Model):
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField("Category", related_name="videos")
     
-
 
 class Comment(models.Model):
     author = models.CharField(max_length=60)
@@ -44,3 +45,7 @@ class Comment(models.Model):
 # apenas mudança de nome
     def __str__(self):
         return f"{self.author} on '{self.post}'"
+
+
+Group.objects.get_or_create(name='Estudante')
+Group.objects.get_or_create(name='Professor')
