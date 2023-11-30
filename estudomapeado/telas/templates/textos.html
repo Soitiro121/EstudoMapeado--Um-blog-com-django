@@ -17,27 +17,34 @@
     <div class="textos">
       <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
 
-    {% if is_professor %}
-        <a href="cria_texto.html" class="sumrio">Criar Texto </a>
-    {% endif %}
 
       <b class="textos1">Textos</b>
-      <b class="sumrio">Sumário</b>
+      <a href="{% url 'sumario' %}"><b class="sumrio">Sumário</b></a>
       
       <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
       <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
 
 
       <div class="textos-item"></div>
+      {% if is_professor %}
+        <a href="{% url 'sumario' %}"><button class="cria" style="
+        position: absolute; top: 25.5%; left: 83%; z-index: 999; padding: 15px 20px; 
+        background-color: #cde6f3; 
+        border: none;
+        border-radius: 10px; 
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Kaisei Opti;
+        ">Criar Texto</button></a>
+      {% endif %}
       {% if textos %}
             <section class="lista-de-cards">
                 {% for texto in textos %}
                     <article class="card">
 
                       <img src="{{ texto.link }}"/>
-                        <p>{{ texto.categories }}</p>
-                        <p>{{ texto.title }} ({{ texto.created_on }})</p>
-                        <p>{{ texto.body }}</p>
+                      <p>{{ texto.categories }}</p>
+                      <p>{{ texto.title }} ({{ texto.created_on }})</p>
+                      <p>{{ texto.body }}</p>
                     </article>
                 {% endfor %}
             </section>

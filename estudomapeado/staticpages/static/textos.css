@@ -76,6 +76,7 @@ body {
     width: 16.38rem;
     height: 1.31rem;
   }
+
   .image-20-icon,
   .image-31-icon {
     position: absolute;
@@ -104,7 +105,7 @@ body {
     overflow: hidden;
     z-index: 1; /* Set a higher z-index value */
   }
-  
+
   .lista-de-cards {
     display: flex;
     flex-wrap: wrap;
@@ -250,6 +251,11 @@ body {
     font-family: var(--font-kaisei-opti);
   }
 
+
+
+  
+  
+  
   
   
   
