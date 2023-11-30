@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="- Acerto da pagina textos para lidar com a view(necessario acerto no template para melhorar apresentação)">
+    <list default="true" id="042d4d76-b325-4adc-b30d-8bfcd5284325" name="Changes" comment="- Alterações para pagina textos e exclusao de sumario">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2023_07_31__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_11_2023_07_31__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_2023_07_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_2023_07_32__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_2023_19_25__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_11_2023_19_25__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudomapeado/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/templates/textos.html" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/templates/textos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudomapeado/telas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/estudomapeado/telas/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -507,7 +509,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701195717401</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="- Alterações para pagina textos e exclusao de sumario">
+      <option name="closed" value="true" />
+      <created>1701370483999</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1701370483999</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +567,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Atualização da base para mostrar pagina com lista das categorias" />
     <MESSAGE value="Adcionando o arquivo requirements txt" />
     <MESSAGE value="atualizando gunicorn e requirements.txt" />
     <MESSAGE value="atualizando requirements.txt" />
@@ -582,7 +591,8 @@
     <MESSAGE value="- exclusao duplicata de arquivos" />
     <MESSAGE value="- Criação de Modelos caategorias video e texto separadas&#10;- Registro dos modelos no admin" />
     <MESSAGE value="- Acerto da pagina textos para lidar com a view(necessario acerto no template para melhorar apresentação)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Acerto da pagina textos para lidar com a view(necessario acerto no template para melhorar apresentação)" />
+    <MESSAGE value="- Alterações para pagina textos e exclusao de sumario" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Alterações para pagina textos e exclusao de sumario" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SisInfoEM$main.coverage" NAME="main Coverage Results" MODIFIED="1700587175318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

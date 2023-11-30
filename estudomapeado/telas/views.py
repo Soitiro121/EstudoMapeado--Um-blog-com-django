@@ -86,7 +86,7 @@ def list_textos(request):
 
     # Adicionando uma prévia para cada texto
     for texto in textos:
-        texto.preview = texto.body[:150]  # Corta os primeiros 100 caracteres
+        texto.preview = texto.body[:250]  # Corta os primeiros 100 caracteres
 
     context = {'textos': textos}
     return render(request, 'textos.html', context)

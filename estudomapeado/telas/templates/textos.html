@@ -43,8 +43,8 @@
 
                       <img src="{{ texto.link }}"/>
                       
-                      <p>{{ texto.title }} ({{ texto.created_on }})</p>
-                      <p>{{ texto.body }}</p>
+                        <p><h1>{{ texto.title }}</h1> {{ texto.created_on }}</p>
+                      <p>{{ texto.preview }}...</p>
                     </article>
                 {% endfor %}
             </section>
