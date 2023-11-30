@@ -4,7 +4,7 @@ from django.contrib import messages
 from . models import *
 from django.contrib.auth.models import User, Group
 from django.shortcuts import render, redirect
-from django.db import IntegrityError
+
 
 
 def cria_conta(request):
@@ -16,7 +16,7 @@ def cria_conta(request):
         tipo_usuario = request.POST.get('userType')
 
         if senha != confirmacao_senha:
-            # Adicionar mensagem de erro
+            print("Senha incorreta")
             return render(request, 'cria_conta.html', {'error': 'As senhas não coincidem'})
 
         try:
@@ -32,10 +32,10 @@ def cria_conta(request):
             group, _ = Group.objects.get_or_create(name=group_name)
             user.groups.add(group)
 
-            return redirect('login')  # Substitua 'login' pelo nome da sua URL de login
+            return redirect('login')
 
         except Exception as e:
-            # Log a exceção ou informe ao usuário
+            print("Erro")
             return render(request, 'cria_conta.html', {'error': str(e)})
 
     return render(request, 'cria_conta.html')
@@ -43,9 +43,7 @@ def cria_conta(request):
 
 @login_required
 def home(request):
-    context = {'is_estudante': request.user.groups.filter(name='Estudante').exists(),
-               'is_professor': request.user.groups.filter(name='Professor').exists()}
-    return render(request, 'home.html', context)
+    return render(request, 'home.html')
 
 
 def altera_senha(request):
@@ -61,7 +59,7 @@ def altera_senha(request):
                 user.save()
 
                 messages.success(request, 'Senha alterada com sucesso.')
-                return redirect('login')  # Substitua pelo nome da sua URL de login
+                return redirect('login')
             except User.DoesNotExist:
                 messages.error(request, 'Usuário não encontrado.')
 
@@ -79,19 +77,33 @@ def sucesso(request):
     return render(request, 'sucesso.html')
 
 
+@login_required
 def list_textos(request):
-    texto_list = Texto.objects.all()
-    context = {'texto_list': texto_list}
+    textos = Texto.objects.all()
+
+    # Adicionando uma prévia para cada texto
+    for texto in textos:
+        texto.preview = texto.body[:150]  # Corta os primeiros 100 caracteres
+
+    context = {'textos': textos}
     return render(request, 'textos.html', context)
 
 
+@login_required
 def list_videos(request):
     video_list = Video.objects.all()
     context = {'video_list': video_list}
     return render(request, 'videos.html', context)
 
 
+@login_required
 def list_video(request):
     video_list = Video.objects.all()
     context = {'video_list': video_list}
     return render(request, 'video.html', context)
+
+@login_required
+def list_sumario(request):
+    sumario_list = Sumario.objects.all()
+    context = {'sumario_list': sumario_list}
+    return render(request, 'sumario.html', context)
