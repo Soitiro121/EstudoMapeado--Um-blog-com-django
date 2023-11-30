@@ -3,8 +3,7 @@ from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from . models import *
 from django.contrib.auth.models import User, Group
-from django.shortcuts import render, redirect
-
+from django.shortcuts import render, redirect, get_object_or_404
 
 
 def cria_conta(request):
@@ -110,3 +109,9 @@ def list_sumario(request):
     sumario_list = Sumario.objects.all()
     context = {'sumario_list': sumario_list}
     return render(request, 'sumario.html', context)
+
+
+@login_required
+def detail_textos(request, texto_id):
+    texto = get_object_or_404(Texto, pk=texto_id)
+    return render(request, 'detail_textos.html', {'texto': texto})

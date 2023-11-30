@@ -42,9 +42,12 @@
                     <article class="card">
 
                       <img src="{{ texto.link }}"/>
-                      
-                        <p><h1>{{ texto.title }}</h1> {{ texto.created_on }}</p>
-                      <p>{{ texto.preview }}...</p>
+                      <a href="{% url 'detail_textos' texto.id %}">
+                        <h1>{{ texto.title }}</h1>
+                      </a>
+                        <p>{{ texto.created_on }}</p>
+                         <p>{{ texto.preview }}...</p>
+
                     </article>
                 {% endfor %}
             </section>

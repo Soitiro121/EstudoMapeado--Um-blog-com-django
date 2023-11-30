@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{% static 'textos.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500;700&display=swap"
+    />
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <div class="textos">
+        <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+        <a href="{% url 'home' %}"><b class="sumrio">Sumário</b></a>
+
+        <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
+        <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
+
+        <div class="textos-item">
+            {% if texto %}
+                <article class="card">
+                    {% if texto.link %}
+                        <img src="{{ texto.link }}" alt="Imagem do texto"/>
+                    {% endif %}
+                    
+                    <h1>{{ texto.title }}</h1>
+                    <p><small>{{ texto.created_on }}</small></p>
+                    <p>{{ texto.body }}</p>
+                </article>
+            {% else %}
+                <p>Texto não encontrado.</p>
+            {% endif %}
+        </div>
+    </div>
+    {% else %}
+    <p>Você precisa estar logado para ver esta página.</p>
+    {% endif %}
+</body>
+</html>
