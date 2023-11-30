@@ -126,20 +126,6 @@ body {
   color: #464343;
   text-align: center;
 }
-.enviar-e-mail-de {
-  position: absolute;
-  top: 890px;
-  left: 582px;
-  letter-spacing: 0.07em;
-  font-weight: 500;
-  color: #464343;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 275px;
-  height: 50px;
-}
 
 .radio-estudante,
 .radio-professor {
@@ -173,14 +159,28 @@ body {
 }
 
 .radio-child3 {
-    cursor: pointer;
     position: absolute;
-    border-radius: var(--br-2xl);
-    background-color: var(--azulroxoclaro);
-    border: 1px solid var(--color-gray);
-    box-sizing: border-box;
-    width: 20px;
-    height: 20px;
+    top: 76%; /* Adjust the top position accordingly */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    left: -30%;
+}
+
+.enviar-e-mail-de {
+  position: absolute;
+  top: 890px;
+  left: 582px;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+  color: #464343;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 275px;
+  height: 50px;
 }
 
 .estudante {
