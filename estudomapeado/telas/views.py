@@ -72,6 +72,9 @@ def altera_senha(request):
 def termos(request):
     return render(request, 'termos.html')
 
+def termos_logado(request):
+    return render(request, 'termos_logado.html')
+
 
 def sucesso(request):
     return render(request, 'sucesso.html')
