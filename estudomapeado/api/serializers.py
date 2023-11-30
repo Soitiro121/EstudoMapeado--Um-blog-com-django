@@ -7,7 +7,7 @@ class TextoSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Texto
-        fields = ['title', 'body', 'link', 'created_on', 'last_modified', 'categories']
+        fields = ['title', 'body', 'link', 'created_on', 'categories']
 
 
 class VideoSerializer(serializers.ModelSerializer):
