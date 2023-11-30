@@ -6,6 +6,7 @@ from django.contrib.auth.models import User, Group
 from django.shortcuts import render, redirect
 
 
+
 def cria_conta(request):
     if request.method == 'POST':
         nome_completo = request.POST.get('nome_completo')
@@ -100,3 +101,9 @@ def list_video(request):
     video_list = Video.objects.all()
     context = {'video_list': video_list}
     return render(request, 'video.html', context)
+
+@login_required
+def list_sumario(request):
+    sumario_list = Sumario.objects.all()
+    context = {'sumario_list': sumario_list}
+    return render(request, 'sumario.html', context)

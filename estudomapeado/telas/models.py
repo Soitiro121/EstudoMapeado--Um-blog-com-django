@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
+
 class CategoryTexto(models.Model):
     name = models.CharField(max_length=30)
 
@@ -42,9 +43,18 @@ class Video(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField("CategoryVideo", related_name="videos")
-    
+
 
 class ForumMessage(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     message = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
+
+
+class Sumario(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    sumario_url = models.URLField()
+
+    def __str__(self):
+        return self.title
