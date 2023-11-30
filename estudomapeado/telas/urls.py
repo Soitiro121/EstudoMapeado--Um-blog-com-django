@@ -20,4 +20,6 @@ urlpatterns = [
     path('video/', views.list_video, name='video'),
     path('sumario/', views.list_sumario, name='sumario'),
     path('detail_textos/<int:texto_id>/', views.detail_textos, name='detail_textos'),
+    path('criar_texto/', views.criar_texto, name='criar_texto'),
+    path('salvar_texto/', views.salvar_texto, name='salvar_texto'),
 ]
