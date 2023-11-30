@@ -52,10 +52,3 @@ class ForumMessage(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
 
 
-class Sumario(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    sumario_url = models.URLField()
-
-    def __str__(self):
-        return self.title
