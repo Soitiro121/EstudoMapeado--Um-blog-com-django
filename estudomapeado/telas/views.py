@@ -164,6 +164,6 @@ def salvar_texto(request):
         novo_texto = Texto(title=title, body=body, link=link)
         novo_texto.save()
 
-        return redirect('nome_da_url_para_lista_de_textos')
+        return redirect('textos')
 
     return render(request, 'criar_texto.html')
