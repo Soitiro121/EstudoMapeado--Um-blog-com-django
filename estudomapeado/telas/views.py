@@ -141,3 +141,29 @@ def salvar_texto(request):
         return redirect('textos')
 
     return render(request, 'criar_texto.html')
+
+
+@login_required
+def criar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        novo_texto = Texto(title=title, body=body)
+        novo_texto.save()
+        return redirect('textos')
+
+    return render(request, 'criar_texto.html')
+
+
+@login_required
+def salvar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        link = request.POST.get('link')
+        novo_texto = Texto(title=title, body=body, link=link)
+        novo_texto.save()
+
+        return redirect('nome_da_url_para_lista_de_textos')
+
+    return render(request, 'criar_texto.html')
