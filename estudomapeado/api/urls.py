@@ -8,6 +8,6 @@ urlpatterns = [
     path('videos/', VideoList.as_view()),
     path('videos/<int:pk>/', VideoDetail.as_view()),
     path('videos/', VideoList.as_view()),
-    path('forummessages/<int:pk>/', ForumMessageList.as_view()),
-    path('forummessages/', ForumMessageDetail.as_view()),
+    path('forummessages/', ForumMessageList.as_view()),
+    path('forummessages/<int:pk>/', ForumMessageDetail.as_view()),
 ]

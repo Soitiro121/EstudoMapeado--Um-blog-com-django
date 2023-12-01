@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ForumForm = () => {
+const ForumForm = ({ onCommentSubmit }) => {
   const [newMessage, setNewMessage] = useState('');
 
   const handleFormSubmit = async event => {
@@ -8,7 +8,7 @@ const ForumForm = () => {
 
     // Make a POST request to your API to add a new message
     try {
-      const response = await fetch('http://your-api-url/api/v1/forummessages/', {
+      const response = await fetch('http://127.0.0.1:8000/api/v1/forummessages/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -18,6 +18,9 @@ const ForumForm = () => {
 
       // Handle the response as needed
       console.log('New message added:', response);
+
+      // Notify the parent component (ForumPage) that a new comment has been added
+      onCommentSubmit();
     } catch (error) {
       console.error('Error adding new message:', error);
     }

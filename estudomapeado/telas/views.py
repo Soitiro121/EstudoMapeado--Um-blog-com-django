@@ -4,6 +4,9 @@ from django.contrib import messages
 from . models import *
 from django.contrib.auth.models import User, Group
 from django.shortcuts import render, redirect, get_object_or_404
+from .models import ForumMessage
+from django.utils import timezone
+
 
 
 def cria_conta(request):
@@ -79,6 +82,13 @@ def sucesso(request):
     return render(request, 'sucesso.html')
 
 
+
+def forum_view(request):
+    forum_messages = ForumMessage.objects.all()
+    return render(request, 'forum_template.html', {'forum_messages': forum_messages})
+
+
+
 @login_required
 def list_textos(request):
     textos = Texto.objects.all()
@@ -115,6 +125,11 @@ def list_sumario(request):
 def detail_textos(request, texto_id):
     texto = get_object_or_404(Texto, pk=texto_id)
     return render(request, 'detail_textos.html', {'texto': texto})
+
+@login_required
+def detail_videos(request, video_id):
+    video = get_object_or_404(Video, pk=video_id)
+    return render(request, 'detail_videos.html', {'video': video})
 
 
 @login_required
@@ -177,3 +192,16 @@ def categoria_textos(request, categoria_id):
         texto.preview = texto.body[:250]
 
     return render(request, 'categoria_textos.html', {'categoria': categoria, 'textos': textos})
+
+@login_required
+def forum_post(request):
+    forum_messages = ForumMessage.objects.order_by('-timestamp')
+    context = {'forum_messages': forum_messages}
+    if request.method == 'POST':
+        message_text = request.POST.get('message', '')
+        user = request.user
+        timestamp = timezone.now()
+
+        ForumMessage.objects.create(user=user, message=message_text, timestamp=timestamp)
+
+    return render(request, 'forum_template.html', context)
