@@ -1,7 +1,7 @@
+from telas.models import Texto, Video, ForumMessage
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from telas.models import Texto, Video, ForumMessage
-
+from telas.models import ForumMessage
 
 class TextoSerializer(serializers.ModelSerializer):
     
@@ -17,9 +17,6 @@ class VideoSerializer(serializers.ModelSerializer):
         ['title', 'body', 'link', 'created_on', 'last_modified', 'categories']
 
 
-from rest_framework import serializers
-from django.contrib.auth.models import User
-from telas.models import ForumMessage
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
