@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-#2bo5#p)%qypc2xhzij6)q5!+yp!#o93%_m@1()!pb7ywz9svz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "estudomapeado.onrender.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "estudomapeado.onrender.com", "localhost", "http://0.0.0.0:8000"]
 
 CSRF_TRUSTED_ORIGINS = ["https://*.onrender.com/"]
 
@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'staticpages'), ]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticpages')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
