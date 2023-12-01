@@ -38,9 +38,9 @@ def cria_conta(request):
 
         except Exception as e:
             print("Erro")
-            return render(request, 'criar_conta.html', {'error': str(e)})
+            return render(request, 'cria_conta.html', {'error': str(e)})
 
-    return render(request, 'criar_conta.html')
+    return render(request, 'cria_conta.html')
 
 
 @login_required
