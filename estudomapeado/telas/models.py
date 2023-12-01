@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django import forms
 from django.urls import reverse
 
 
@@ -63,3 +64,33 @@ class ForumMessage(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     message = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
+
+
+#modelo para inserção de categoria no formulario
+class TextoForm(forms.ModelForm):
+    new_category = forms.CharField(required=False, help_text="Ou escreva uma nova categoria")
+
+    class Meta:
+        model = Texto
+        fields = ['title', 'body', 'link', 'categories']
+
+    def __init__(self, *args, **kwargs):
+        super(TextoForm, self).__init__(*args, **kwargs)
+        self.fields['categories'].required = False
+
+    def save(self, commit=True):
+        instance = super(TextoForm, self).save(commit=False)
+
+        # Cria uma nova categoria se necessário
+        if self.cleaned_data['new_category']:
+            new_category, created = CategoryTexto.objects.get_or_create(name=self.cleaned_data['new_category'])
+            instance.save()
+            instance.categories.add(new_category)
+        else:
+            instance.save()
+
+        if commit:
+            instance.save()
+            self.save_m2m()
+
+        return instance

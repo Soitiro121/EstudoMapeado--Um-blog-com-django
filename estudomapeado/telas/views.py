@@ -174,27 +174,15 @@ def salvar_texto(request):
 @login_required
 def criar_texto(request):
     if request.method == 'POST':
-        title = request.POST.get('title')
-        body = request.POST.get('body')
-        novo_texto = Texto(title=title, body=body)
-        novo_texto.save()
-        return redirect('textos')
+        form = TextoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('textos')
+    else:
+        form = TextoForm()
+    categorias = CategoryTexto.objects.all().order_by('name')
+    return render(request, 'criar_texto.html', {'form': form, 'categorias': categorias})
 
-    return render(request, 'criar_texto.html')
-
-
-@login_required
-def salvar_texto(request):
-    if request.method == 'POST':
-        title = request.POST.get('title')
-        body = request.POST.get('body')
-        link = request.POST.get('link')
-        novo_texto = Texto(title=title, body=body, link=link)
-        novo_texto.save()
-
-        return redirect('textos')
-
-    return render(request, 'criar_texto.html')
 
 @login_required
 def categoria_textos(request, categoria_id):
