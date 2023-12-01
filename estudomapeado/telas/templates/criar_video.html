@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{% static 'videos.css' %}" />
+    <link rel="stylesheet" href="{% static 'textos.css' %}" />
+    <link rel="stylesheet" href="{% static 'formulario.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500;700&display=swap"
+    />
+</head>
+<body>
+    {% if user.is_authenticated and is_professor %}
+    <div class="videos">
+        <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+         <b class="textos1">Vídeos</b>
+         <a href="{% url 'home' %}"><b class="sumrio">Sumário</b></a>
+
+        <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
+        <img class="image-31-icon" alt="" src="{% static 'image-8@2x.png' %}" />
+
+        <div class="textos-container">
+            <div class="formulario-texto">
+                <h2>Criar Novo vídeo</h2>
+                    <form action="{% url 'salvar_texto' %}" method="post">
+                        {% csrf_token %}
+                        <label for="title">Título:</label>
+                        <input type="text" id="title" name="title" required>
+
+                        <label for="body">Vídeo:</label>
+                        <textarea id="body" name="body" rows="6" required></textarea>
+
+                        <input type="submit" value="Criar Vídeo">
+                    </form>
+        </div>
+
+    </div>
+    {% else %}
+    <p>Você precisa ser um professor logado para ver esta página.</p>
+    {% endif %}
+</body>
+</html>

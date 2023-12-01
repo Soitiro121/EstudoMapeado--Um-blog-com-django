@@ -218,3 +218,14 @@ def forum_post(request):
         ForumMessage.objects.create(user=user, message=message_text, timestamp=timestamp)
 
     return render(request, 'forum_template.html', context)
+
+@login_required
+def criar_video(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        novo_video = Video(title=title, body=body)
+        novo_video.save()
+        return redirect('videos')
+
+    return render(request, 'criar_video.html')

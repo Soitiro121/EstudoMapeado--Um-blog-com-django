@@ -24,6 +24,17 @@
       <img class="image-8-icon" alt="" src="{% static 'image-8@2x.png' %}" />
 
       <div class="videos-item"></div>
+      {% if is_professor %}
+        <a href="{% url 'criar_video' %}"><button class="cria" style="
+        position: absolute; top: 25.5%; left: 83%; z-index: 999; padding: 15px 20px; 
+        background-color: #cde6f3; 
+        border: none;
+        border-radius: 10px; 
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Kaisei Opti;
+        ">Criar Vídeo</button></a>
+      {% endif %}
+
       {% if video_list %}
             <section class="lista-de-cards">
                 {% for video in video_list %}
