@@ -26,18 +26,29 @@
         <div class="textos-container">
             <div class="formulario-texto">
                 <h2>Criar Novo vídeo</h2>
-                    <form action="{% url 'salvar_texto' %}" method="post">
+                    <form action="{% url 'salvar_video' %}" method="post">
                         {% csrf_token %}
                         <label for="title">Título:</label>
-                        <input type="text" id="title" name="title" required>
+                        <input type="text" id="title" name="title" class="form-control" required>
 
                         <label for="link">Link:</label>
-                        <textarea type="text" id="link" name="link" required></textarea>
+                        <input type="url" id="link" name="link" class="form-control">
 
                         <label for="body">Conteúdo:</label>
-                        <textarea id="body" name="body" rows="6" required></textarea>
+                        <textarea id="body" name="body" class="form-control" rows="6" required></textarea>
 
-                        <a href = "{% url 'home' %}"><input type="submit" value="Criar Vídeo"></a>
+                        <label for="categories">Categorias:</label>
+                        <select id="categories" name="categories" class="form-control">
+                            {% for categoria in categorias %}
+                            <option value="{{ categoria.id }}">{{ categoria.name }}</option>
+                            {% endfor %}
+                            <option value="">Nova Categoria</option>
+                        </select>
+
+                        <label for="new_category" style="display: none;">Nova Categoria:</label>
+                        <input type="text" id="new_category" name="new_category" class="form-control" style="display: none;">
+
+                        <input type="submit" value="Criar Vídeo" class="btn btn-primary">
                     </form>
         </div>
 

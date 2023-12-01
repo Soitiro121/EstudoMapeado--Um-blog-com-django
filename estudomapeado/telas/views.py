@@ -217,3 +217,16 @@ def criar_video(request):
         return redirect('videos')
 
     return render(request, 'criar_video.html')
+
+@login_required
+def salvar_video(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        link = request.POST.get('link')
+        novo_video = Video(title=title, body=body, link=link)
+        novo_video.save()
+
+        return redirect('videos')
+
+    return render(request, 'criar_video.html')
