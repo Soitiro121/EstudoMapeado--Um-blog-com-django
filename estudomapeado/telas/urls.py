@@ -19,5 +19,6 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
     path('sumario/', views.list_sumario, name='sumario'),
     path('detail_textos/<int:texto_id>/', views.detail_textos, name='detail_textos'),
-    path('detail_videos/<int:video_id>/', views.detail_videos, name='detail_videos'),
+    path('criar_texto/', views.criar_texto, name='criar_texto'),
+    path('salvar_texto/', views.salvar_texto, name='salvar_texto'),
 ]

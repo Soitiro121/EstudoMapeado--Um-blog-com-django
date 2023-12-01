@@ -16,7 +16,7 @@ def cria_conta(request):
 
         if senha != confirmacao_senha:
             print("Senha incorreta")
-            return render(request, 'cria_conta.html', {'error': 'As senhas não coincidem'})
+            return render(request, 'criar_conta.html', {'error': 'As senhas não coincidem'})
 
         try:
             user = User.objects.create_user(
@@ -35,9 +35,9 @@ def cria_conta(request):
 
         except Exception as e:
             print("Erro")
-            return render(request, 'cria_conta.html', {'error': str(e)})
+            return render(request, 'criar_conta.html', {'error': str(e)})
 
-    return render(request, 'cria_conta.html')
+    return render(request, 'criar_conta.html')
 
 
 @login_required
@@ -116,3 +116,54 @@ def detail_textos(request, texto_id):
     texto = get_object_or_404(Texto, pk=texto_id)
     return render(request, 'detail_textos.html', {'texto': texto})
 
+
+@login_required
+def criar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        novo_texto = Texto(title=title, body=body)
+        novo_texto.save()
+        return redirect('textos')
+
+    return render(request, 'criar_texto.html')
+
+
+@login_required
+def salvar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        link = request.POST.get('link')
+        novo_texto = Texto(title=title, body=body, link=link)
+        novo_texto.save()
+
+        return redirect('textos')
+
+    return render(request, 'criar_texto.html')
+
+
+@login_required
+def criar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        novo_texto = Texto(title=title, body=body)
+        novo_texto.save()
+        return redirect('textos')
+
+    return render(request, 'criar_texto.html')
+
+
+@login_required
+def salvar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        link = request.POST.get('link')
+        novo_texto = Texto(title=title, body=body, link=link)
+        novo_texto.save()
+
+        return redirect('textos')
+
+    return render(request, 'criar_texto.html')
