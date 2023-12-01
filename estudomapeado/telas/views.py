@@ -126,6 +126,11 @@ def detail_textos(request, texto_id):
     texto = get_object_or_404(Texto, pk=texto_id)
     return render(request, 'detail_textos.html', {'texto': texto})
 
+@login_required
+def detail_videos(request, video_id):
+    video = get_object_or_404(Video, pk=video_id)
+    return render(request, 'detail_videos.html', {'video': video})
+
 
 @login_required
 def criar_texto(request):
