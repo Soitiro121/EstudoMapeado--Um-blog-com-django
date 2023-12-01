@@ -4,6 +4,8 @@ from django.contrib import messages
 from . models import *
 from django.contrib.auth.models import User, Group
 from django.shortcuts import render, redirect
+from .models import ForumMessage
+from django.utils import timezone
 
 
 
@@ -80,6 +82,13 @@ def sucesso(request):
     return render(request, 'sucesso.html')
 
 
+
+def forum_view(request):
+    forum_messages = ForumMessage.objects.all()
+    return render(request, 'forum_template.html', {'forum_messages': forum_messages})
+
+
+
 @login_required
 def list_textos(request):
     textos = Texto.objects.all()
@@ -110,3 +119,16 @@ def list_sumario(request):
     sumario_list = Sumario.objects.all()
     context = {'sumario_list': sumario_list}
     return render(request, 'sumario.html', context)
+
+@login_required
+def forum_post(request):
+    forum_messages = ForumMessage.objects.order_by('-timestamp')
+    context = {'forum_messages': forum_messages}
+    if request.method == 'POST':
+        message_text = request.POST.get('message', '')
+        user = request.user
+        timestamp = timezone.now()
+
+        ForumMessage.objects.create(user=user, message=message_text, timestamp=timestamp)
+
+    return render(request, 'forum_template.html', context)

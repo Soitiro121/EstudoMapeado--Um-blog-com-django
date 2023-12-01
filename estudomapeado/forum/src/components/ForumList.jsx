@@ -8,7 +8,7 @@ const ForumList = () => {
     // Fetch data from the API when the component mounts
     const fetchForumMessages = async () => {
       try {
-        const response = await fetch('http://your-api-url/api/v1/forummessages/');
+        const response = await fetch('http://127.0.0.1:8000/api/v1/forummessages/');
         const data = await response.json();
         setForumMessages(data);
       } catch (error) {

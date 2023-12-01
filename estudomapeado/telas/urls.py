@@ -5,6 +5,9 @@ from .views import *
 
 
 
+
+
+
 urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='login.html', redirect_authenticated_user=True),
          name='login'),
@@ -19,4 +22,6 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
     path('video/', views.list_video, name='video'),
     path('sumario/', views.list_sumario, name='sumario'),
+    path('forum/', forum_view, name='forum_view'),
+    path('forum/post/', forum_post, name='forum_post'),
 ]
