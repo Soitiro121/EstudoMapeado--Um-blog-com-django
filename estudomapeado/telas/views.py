@@ -3,7 +3,7 @@ from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from . models import *
 from django.contrib.auth.models import User, Group
-from django.shortcuts import render, redirect, get_object_or_404from 
+from django.shortcuts import render, redirect, get_object_or_404 
 from .models import ForumMessage
 from django.utils import timezone
 
