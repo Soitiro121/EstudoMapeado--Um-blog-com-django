@@ -221,3 +221,16 @@ def criar_video(request):
 
     categorias = CategoryTexto.objects.all().order_by('name')
     return render(request, 'criar_video.html', {'form': form, 'categorias': categorias})
+
+@login_required
+def salvar_video(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        link = request.POST.get('link')
+        novo_video = Video(title=title, body=body, link=link)
+        novo_video.save()
+
+        return redirect('videos')
+
+    return render(request, 'criar_video.html')

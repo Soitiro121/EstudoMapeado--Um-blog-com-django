@@ -26,7 +26,6 @@ urlpatterns = [
     path('criar_texto/', views.criar_texto, name='criar_texto'),
     path('criar_video/', views.criar_video, name='criar_video'),
     path('salvar_texto/', views.salvar_texto, name='salvar_texto'),
-    path('salvar_video/', views.salvar_video, name='salvar_video'),
     path('forum/', forum_view, name='forum_view'),
     path('forum/post/', forum_post, name='forum_post'),
     path('categorias/<int:categoria_id>/', views.categoria_textos, name='categoria_textos'),
