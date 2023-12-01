@@ -27,4 +27,5 @@ urlpatterns = [
     path('salvar_texto/', views.salvar_texto, name='salvar_texto'),
     path('forum/', forum_view, name='forum_view'),
     path('forum/post/', forum_post, name='forum_post'),
+    path('categorias/<int:categoria_id>/', views.categoria_textos, name='categoria_textos'),
 ]

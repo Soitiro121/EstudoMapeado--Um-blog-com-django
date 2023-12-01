@@ -3,7 +3,7 @@ from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from . models import *
 from django.contrib.auth.models import User, Group
-from django.shortcuts import render, redirect, get_object_or_404 
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import ForumMessage
 from django.utils import timezone
 
@@ -182,6 +182,16 @@ def salvar_texto(request):
         return redirect('textos')
 
     return render(request, 'criar_texto.html')
+
+@login_required
+def categoria_textos(request, categoria_id):
+    categoria = get_object_or_404(CategoryTexto, pk=categoria_id)
+    textos = categoria.textos.all()
+
+    for texto in textos:
+        texto.preview = texto.body[:250]
+
+    return render(request, 'categoria_textos.html', {'categoria': categoria, 'textos': textos})
 
 @login_required
 def forum_post(request):
