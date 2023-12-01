@@ -94,3 +94,31 @@ class TextoForm(forms.ModelForm):
             self.save_m2m()
 
         return instance
+
+
+class VideoForm(forms.ModelForm):
+    new_category = forms.CharField(required=False, help_text="Ou escreva uma nova categoria")
+
+    class Meta:
+        model = Video
+        fields = ['title', 'body', 'link', 'categories']
+
+    def __init__(self, *args, **kwargs):
+        super(VideoForm, self).__init__(*args, **kwargs)
+        self.fields['categories'].required = False
+
+    def save(self, commit=True):
+        instance = super(VideoForm, self).save(commit=False)
+
+        if self.cleaned_data['new_category']:
+            new_category, created = CategoryVideo.objects.get_or_create(name=self.cleaned_data['new_category'])
+            instance.save()
+            instance.categories.add(new_category)
+        else:
+            instance.save()
+
+        if commit:
+            instance.save()
+            self.save_m2m()
+
+        return instance

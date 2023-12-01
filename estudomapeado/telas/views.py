@@ -194,6 +194,7 @@ def categoria_textos(request, categoria_id):
 
     return render(request, 'categoria_textos.html', {'categoria': categoria, 'textos': textos})
 
+
 @login_required
 def forum_post(request):
     forum_messages = ForumMessage.objects.order_by('-timestamp')
@@ -207,26 +208,16 @@ def forum_post(request):
 
     return render(request, 'forum_template.html', context)
 
+
 @login_required
 def criar_video(request):
     if request.method == 'POST':
-        title = request.POST.get('title')
-        body = request.POST.get('body')
-        novo_video = Video(title=title, body=body)
-        novo_video.save()
-        return redirect('videos')
+        form = VideoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('videos')
+    else:
+        form = VideoForm()
 
-    return render(request, 'criar_video.html')
-
-@login_required
-def salvar_video(request):
-    if request.method == 'POST':
-        title = request.POST.get('title')
-        body = request.POST.get('body')
-        link = request.POST.get('link')
-        novo_video = Video(title=title, body=body, link=link)
-        novo_video.save()
-
-        return redirect('videos')
-
-    return render(request, 'criar_video.html')
+    categorias = CategoryTexto.objects.all().order_by('name')
+    return render(request, 'criar_video.html', {'form': form, 'categorias': categorias})
