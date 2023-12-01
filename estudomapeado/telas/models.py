@@ -40,6 +40,16 @@ class Texto(models.Model):
         return self.title
 
 
+class Comentario(models.Model):
+    texto = models.ForeignKey(Texto, related_name='comentarios', on_delete=models.CASCADE)
+    autor = models.ForeignKey(User, on_delete=models.CASCADE)
+    conteudo = models.TextField()
+    data_criacao = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Comentário por {self.autor.username} em {self.texto.title}'
+
+
 class Video(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()

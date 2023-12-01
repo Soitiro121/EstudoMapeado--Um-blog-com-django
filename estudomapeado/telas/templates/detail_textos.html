@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500;700&display=swap"
     />
+    <link rel="stylesheet" href="{% static 'comentarios.css' %}" />
 </head>
 <body>
     {% if user.is_authenticated %}
@@ -32,6 +33,28 @@
                     <p><small>{{ texto.created_on }}</small></p>
                     <p>{{ texto.body }}</p>
                 </article>
+
+                <!-- Seção de Comentários -->
+                <div class="comentarios">
+                    <h2>Comentários</h2>
+                    {% for comentario in texto.comentarios.all %}
+                        <div class="comentario">
+                            <p><strong>{{ comentario.autor.username }}</strong> em {{ comentario.data_criacao }}</p>
+                            <p>{{ comentario.conteudo }}</p>
+                        </div>
+                    {% empty %}
+                        <p>Nenhum comentário ainda.</p>
+                    {% endfor %}
+
+                    <!-- Formulário para novo comentário -->
+                   {% if user.is_authenticated %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <textarea name="conteudo" placeholder="Adicione seu comentário..." required></textarea>
+                            <button type="submit">Postar Comentário</button>
+                        </form>
+                </div>
+                       {% endif %}
             {% else %}
                 <p>Texto não encontrado.</p>
             {% endif %}

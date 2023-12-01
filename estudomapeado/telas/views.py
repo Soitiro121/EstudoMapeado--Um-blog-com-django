@@ -124,7 +124,20 @@ def list_sumario(request):
 @login_required
 def detail_textos(request, texto_id):
     texto = get_object_or_404(Texto, pk=texto_id)
-    return render(request, 'detail_textos.html', {'texto': texto})
+    comentarios = texto.comentarios.all()
+
+    if request.method == 'POST' and request.user.is_authenticated:
+        conteudo = request.POST.get('conteudo')
+        if conteudo:
+            Comentario.objects.create(
+                texto=texto,
+                autor=request.user,
+                conteudo=conteudo,
+                data_criacao=timezone.now()
+            )
+            return redirect('detail_textos', texto_id=texto_id)
+
+    return render(request, 'detail_textos.html', {'texto': texto, 'comentarios': comentarios})
 
 @login_required
 def detail_videos(request, video_id):
