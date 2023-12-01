@@ -1,84 +1,19 @@
-<!-- home.html -->
 {% load static %}
+
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-    
-        <link rel="stylesheet" href="{% static 'sumario.css' %}" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@700&display=swap"
-        />
-    </head>
-    <body>
-        <div class="sumrio">
-          <div class="frame">
-            <div class="frame1">
-              <img class="image-12-icon" alt="" src="{% static 'image-12@2x.png' %}" />
-    
-              <img class="image-9-icon" alt="" src="{% static 'image-9@2x.png' %}" />
-    
-              <div class="frame2">
-                <img class="image-8-input" alt="" src="{% static 'image-8--input@2x.png' %}"
-                />
-    
-                <img class="image-13-icon" alt="" src="{% static 'image-13@2x.png' %}" />
-              </div>
-            </div>
-          </div>
-          <div class="frame3">
-            <div class="group">
-              <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
-            </div>
-            <div class="frame4">
-              <div class="frame5">
-                <div class="frame6">
-                  <div class="frame7">
-                    <div class="frame-child"></div>
-                  </div>
-                </div>
-                <div class="frame8">
-                  <div class="frame9">
-                    <b class="pesquisa">Pesquisa</b>
-                    <div class="frame10">
-                      <div class="frame11">
-    
-                        <img class="image-10-icon" alt="" src="{% static 'image-15@2x.png' %}" />
-    
-                        <img class="image-14-icon" alt="" src="{% static 'image-14@2x.png' %}" />
-                      </div>
-                      <div class="frame12">
-                        <div class="meu-perfil-wrapper">
-                          <b class="meu-perfil">Meu perfil</b>
-                        </div>
-                        <div class="meu-perfil-wrapper">
-                          <b class="meu-perfil">Meu perfil</b>
-                        </div>
-                        <a href="{% url 'logout' %}"><b class="termos-de-uso">Logout</b></a>
-                        <a href="{% url 'termos_logado' %}"><b class="termos-de-uso1">Termos de uso</b></a>
-                      </div>
-                    </div>
-                  </div>
-                  <b class="textos">Textos</b>
-                </div>
-              </div>
-              <div class="frame13">
-                <b class="textos">Vídeos</b>
-                <div class="frame14">
-                  <b class="canal-de-comunicao">Canal de comunicação</b>
-                  <div class="frame15">
-                    <img class="image-11-icon" alt="" src="{% static 'image-11@2x.png' %}" />
-    
-                    <b class="sair">Sair</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </body>
+  <div style="width: 100%; height: 1024px; position: relative; background: #D5F9F1">
+    <img style="width: 258px; height: 241px; left: 40%; top: 126px; position: absolute" src="{% static 'logo@2x.png' %}" />
+    <a href="{% url 'videos' %}" style="width: 118px; height: 61px; left: 50%; top: 566px; position: absolute; text-align: justify; color: black; font-size: 32px; font-family: Kaisei Opti; font-weight: 700; text-decoration: underline; word-wrap: break-word">Vídeos</div></a>
+    <a href="{% url 'forum_post' %}" style="width: 414px; height: 61px; left: 50%; top: 657px; position: absolute; color: black; font-size: 32px; font-family: Kaisei Opti; font-weight: 700; text-decoration: underline; word-wrap: break-word">Canal de comunicação</div></a>
+    <a href="{% url 'textos' %}" style="width: 106px; height: 61px; left: 50%; top: 471px; position: absolute; text-align: justify; color: black; font-size: 32px; font-family: Kaisei Opti; font-weight: 700; text-decoration: underline; word-wrap: break-word">Textos</div></a>
+    <img style="width: 64px; height: 64px; left: 35%; top: 468px; position: absolute" src="{% static 'image-9@2x.png' %}" />
+    <img style="width: 76px; height: 70px; left: 35%; top: 562px; position: absolute" src="{% static 'image-8--input@2x.png' %}" />
+    <img style="width: 83px; height: 83px; left: 35%; top: 652px; position: absolute" src="{% static 'image-13@2x.png' %}" />
+    <img style="width: 46px; height: 46px; left: 35%; top: 848px; position: absolute" src="{% static 'image-15@2x.png' %}" />
+    <img style="width: 53px; height: 53px; left: 35%; top: 765px; position: absolute" src="{% static 'image-14@2x.png' %}" />
+    <a href="{% url 'termos' %}" style="width: 317px; height: 31px; left: 50%; top: 863px; position: absolute; color: black; font-size: 16px; font-family: Kaisei Opti; font-weight: 700; word-wrap: break-word">Sair</div></a>
+    <a href="{% url 'logout' %}" style="width: 317px; height: 31px; left: 50%; top: 774px; position: absolute; color: black; font-size: 16px; font-family: Kaisei Opti; font-weight: 700; word-wrap: break-word">Termos de uso</div></a>
+  </div>
 </html>
-
-
