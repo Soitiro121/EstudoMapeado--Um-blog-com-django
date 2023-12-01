@@ -29,4 +29,5 @@ urlpatterns = [
     path('forum/', forum_view, name='forum_view'),
     path('forum/post/', forum_post, name='forum_post'),
     path('categorias/<int:categoria_id>/', views.categoria_textos, name='categoria_textos'),
+    path('salvar_video/', views.salvar_video, name='salvar_video'),
 ]
