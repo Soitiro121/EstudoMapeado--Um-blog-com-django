@@ -99,6 +99,12 @@ def list_videos(request):
 
 
 @login_required
+def list_video(request):
+    video_list = Video.objects.all()
+    context = {'video_list': video_list}
+    return render(request, 'video.html', context)
+
+@login_required
 def list_sumario(request):
     sumario_list = Sumario.objects.all()
     context = {'sumario_list': sumario_list}
@@ -110,7 +116,3 @@ def detail_textos(request, texto_id):
     texto = get_object_or_404(Texto, pk=texto_id)
     return render(request, 'detail_textos.html', {'texto': texto})
 
-@login_required
-def detail_videos(request, video_id):
-    video = get_object_or_404(Video, pk=video_id)
-    return render(request, 'detail_videos.html', {'video': video})
