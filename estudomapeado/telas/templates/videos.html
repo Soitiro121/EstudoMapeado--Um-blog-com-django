@@ -28,11 +28,14 @@
             <section class="lista-de-cards">
                 {% for video in video_list %}
                     <article class="card">
+
+                      <img src="{{ video.link }}"/>
+                      <a href="{% url 'detail_videos' video.id %}">
+                        <h1>{{ video.title }}</h1>
+                      </a>
+                        <p>{{ video.created_on }}</p>
+                         <p>{{ video.preview }}...</p>
                         
-                        <img src="{{ video.link }}"/>
-                        
-                        <p>{{ video.title }} ({{ video.created_on }})</p>
-                        <p>{{ video.body }}</p>
                     </article>
                 {% endfor %}
             </section>
