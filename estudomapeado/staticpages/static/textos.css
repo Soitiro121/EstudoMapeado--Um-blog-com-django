@@ -39,7 +39,7 @@ body {
     top: 78.38rem;
     left: 35.69rem;
     width: 4.56rem;
-    height: 4.56rem;
+    height: 4.56rem; 
   }
   .textos-child {
     top: 76.06rem;
@@ -101,8 +101,8 @@ body {
     border-radius: 44px;
     background-color: var(--azulroxoclaro);
     width: 100%;
-    height: 76.06rem;
-    overflow: hidden;
+    min-height: 80rem;
+    overflow: visible;
     z-index: 1; /* Set a higher z-index value */
   }
 
@@ -243,8 +243,8 @@ body {
     position: relative;
     background-color: var(--rosa);
     width: 100%;
-    height: 84.5rem;
-    overflow: hidden;
+    min-height: 86rem;
+    overflow: visible;
     text-align: left;
     font-size: var(--font-size-mini);
     color: var(--color-black);
