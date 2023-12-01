@@ -31,10 +31,13 @@
                         <label for="title">Título:</label>
                         <input type="text" id="title" name="title" required>
 
-                        <label for="body">Vídeo:</label>
+                        <label for="link">Link:</label>
+                        <textarea type="text" id="link" name="link" required></textarea>
+
+                        <label for="body">Conteúdo:</label>
                         <textarea id="body" name="body" rows="6" required></textarea>
 
-                        <input type="submit" value="Criar Vídeo">
+                        <a href = "{% url 'home' %}"><input type="submit" value="Criar Vídeo"></a>
                     </form>
         </div>
 
