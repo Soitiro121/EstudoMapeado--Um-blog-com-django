@@ -3,7 +3,7 @@ from django.contrib.auth.hashers import make_password
 from django.contrib import messages
 from . models import *
 from django.contrib.auth.models import User, Group
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404from 
 from .models import ForumMessage
 from django.utils import timezone
 
@@ -19,7 +19,7 @@ def cria_conta(request):
 
         if senha != confirmacao_senha:
             print("Senha incorreta")
-            return render(request, 'cria_conta.html', {'error': 'As senhas não coincidem'})
+            return render(request, 'criar_conta.html', {'error': 'As senhas não coincidem'})
 
         try:
             user = User.objects.create_user(
@@ -38,9 +38,9 @@ def cria_conta(request):
 
         except Exception as e:
             print("Erro")
-            return render(request, 'cria_conta.html', {'error': str(e)})
+            return render(request, 'criar_conta.html', {'error': str(e)})
 
-    return render(request, 'cria_conta.html')
+    return render(request, 'criar_conta.html')
 
 
 @login_required
@@ -95,7 +95,7 @@ def list_textos(request):
 
     # Adicionando uma prévia para cada texto
     for texto in textos:
-        texto.preview = texto.body[:150]  # Corta os primeiros 100 caracteres
+        texto.preview = texto.body[:250]  # Corta os primeiros 100 caracteres
 
     context = {'textos': textos}
     return render(request, 'textos.html', context)
@@ -119,6 +119,64 @@ def list_sumario(request):
     sumario_list = Sumario.objects.all()
     context = {'sumario_list': sumario_list}
     return render(request, 'sumario.html', context)
+
+
+@login_required
+def detail_textos(request, texto_id):
+    texto = get_object_or_404(Texto, pk=texto_id)
+    return render(request, 'detail_textos.html', {'texto': texto})
+
+
+@login_required
+def criar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        novo_texto = Texto(title=title, body=body)
+        novo_texto.save()
+        return redirect('textos')
+
+    return render(request, 'criar_texto.html')
+
+
+@login_required
+def salvar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        link = request.POST.get('link')
+        novo_texto = Texto(title=title, body=body, link=link)
+        novo_texto.save()
+
+        return redirect('textos')
+
+    return render(request, 'criar_texto.html')
+
+
+@login_required
+def criar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        novo_texto = Texto(title=title, body=body)
+        novo_texto.save()
+        return redirect('textos')
+
+    return render(request, 'criar_texto.html')
+
+
+@login_required
+def salvar_texto(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        link = request.POST.get('link')
+        novo_texto = Texto(title=title, body=body, link=link)
+        novo_texto.save()
+
+        return redirect('textos')
+
+    return render(request, 'criar_texto.html')
 
 @login_required
 def forum_post(request):
