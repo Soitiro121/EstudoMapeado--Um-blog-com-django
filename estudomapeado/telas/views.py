@@ -167,3 +167,13 @@ def salvar_texto(request):
         return redirect('textos')
 
     return render(request, 'criar_texto.html')
+
+@login_required
+def categoria_textos(request, categoria_id):
+    categoria = get_object_or_404(CategoryTexto, pk=categoria_id)
+    textos = categoria.textos.all()
+
+    for texto in textos:
+        texto.preview = texto.body[:250]
+
+    return render(request, 'categoria_textos.html', {'categoria': categoria, 'textos': textos})

@@ -22,4 +22,5 @@ urlpatterns = [
     path('detail_textos/<int:texto_id>/', views.detail_textos, name='detail_textos'),
     path('criar_texto/', views.criar_texto, name='criar_texto'),
     path('salvar_texto/', views.salvar_texto, name='salvar_texto'),
+    path('categorias/<int:categoria_id>/', views.categoria_textos, name='categoria_textos'),
 ]

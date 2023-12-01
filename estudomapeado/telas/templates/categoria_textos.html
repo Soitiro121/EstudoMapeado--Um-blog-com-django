@@ -17,24 +17,15 @@
     <div class="textos">
       <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
 
-
-      <b class="textos1">Textos</b>
+      <b class="textos1">Categoria: {{ categoria.name }}</b>
       <a href="{% url 'home' %}"><b class="sumrio">Sumário</b></a>
-      
+
       <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
       <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
 
-
       <div class="textos-item"></div>
       {% if is_professor %}
-        <a href="{% url 'criar_texto' %}"><button class="cria" style="
-        position: absolute; top: 25.5%; left: 83%; z-index: 999; padding: 15px 20px; 
-        background-color: #cde6f3; 
-        border: none;
-        border-radius: 10px; 
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        font-family: Kaisei Opti;
-        ">Criar Texto</button></a>
+        <a href="{% url 'criar_texto' %}"><button class="cria">Criar Texto</button></a>
       {% endif %}
       {% if textos %}
             <section class="lista-de-cards">
@@ -46,16 +37,13 @@
                         <h1>{{ texto.title }}</h1>
                       </a>
 
-                         {% for categoria in texto.categories.all %}
-                            <a href="{{ categoria.get_absolute_url }}">{{ categoria.name }}</a>
-                         {% endfor %}
                          <p>{{ texto.created_on }}</p>
-                         <p>{{ texto.preview }}...</p>
+                         <p>{{ texto.preview|safe }}...</p>
                     </article>
                 {% endfor %}
             </section>
         {% else %}
-            <p>Não foi encontrado nenhum texto.</p>
+            <p>Não foram encontrados textos para a categoria {{ categoria.name }}.</p>
         {% endif %}
     </div>
       {% else %}
