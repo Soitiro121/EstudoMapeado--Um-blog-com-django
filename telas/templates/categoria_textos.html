@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'textos.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500;700&display=swap"
+    />
+  </head>
+  <body>
+    {% if user.is_authenticated %}
+    <div class="textos">
+      <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+
+      <b class="textos1">Categoria: {{ categoria.name }}</b>
+      <a href="{% url 'home' %}"><b class="sumrio">Sumário</b></a>
+
+      <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
+      <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
+
+      <div class="textos-item"></div>
+      {% if is_professor %}
+        <a href="{% url 'criar_texto' %}"><button class="cria">Criar Texto</button></a>
+      {% endif %}
+      {% if textos %}
+            <section class="lista-de-cards">
+                {% for texto in textos %}
+                    <article class="card">
+
+                      <img src="{{ texto.link }}"/>
+                      <a href="{% url 'detail_textos' texto.id %}">
+                        <h1>{{ texto.title }}</h1>
+                      </a>
+
+                         <p>{{ texto.created_on }}</p>
+                         <p>{{ texto.preview|safe }}...</p>
+                    </article>
+                {% endfor %}
+            </section>
+        {% else %}
+            <p>Não foram encontrados textos para a categoria {{ categoria.name }}.</p>
+        {% endif %}
+    </div>
+      {% else %}
+      <p>Você precisa estar logado para ver esta página.</p>
+      {% endif %}
+  </body>
+</html>

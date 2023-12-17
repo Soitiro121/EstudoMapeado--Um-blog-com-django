@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" type="text/css" href="{% static 'global.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=jsMath-cmr10:wght@400&display=swap"
+  />
+</head>
+<body>
+  <div class="login">
+      {% if form.errors %}
+        <p>Seu nome de usuário e senha não coincidem. Por favor, tente novamente.</p>
+      {% endif %}
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <input class="login-child" name="username" type="text" placeholder="Usuário" />
+      <input class="rectangle-input" name="password" type="password" placeholder="Senha" />
+
+      <button class="rectangle-button" type="submit">Entrar</button>
+    </form>
+
+    <a class="esqueceu-sua-senha" href="{% url 'altera_senha' %}">Esqueceu sua senha?</a>
+    <a href="{% url 'cria_conta' %}" class="criar-conta-button-link">
+    <button class="criar-conta-button">Cria uma conta</button>
+    </a>
+    <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+  </div>
+</body>
+</html>

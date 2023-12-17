@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-kaisei-opti: "Kaisei Opti";
+  
+    /* font sizes */
+    --font-size-base: 16px;
+  
+    /* Colors */
+    --verde-claro: #d5f9f1;
+    --azulroxoclaro: #cde6f3;
+    --color-gray: rgba(0, 0, 0, 0.28);
+    --color-dimgray: #5a5353;
+    --verde: #93c47d;
+  
+    /* Border radiuses */
+    --br-2xl: 21px;
+  }
+
+  
+.cadastro-child,
+.cadastro-inner,
+.cadastro-item,
+.rectangle-input {
+  border: 1px solid var(--color-gray);
+  background-color: var(--azulroxoclaro);
+  position: absolute;
+  top: 51%;
+  left: 27%;
+  border-radius: var(--br-2xl);
+  box-sizing: border-box;
+  width: 25%;
+  height: 41px;
+}
+.cadastro-inner,
+.cadastro-item,
+.rectangle-input {
+  left: 58%;
+}
+.cadastro-inner,
+.rectangle-input {
+  top: 627px;
+  left: 27%;
+}
+.rectangle-input {
+  left: 58%;
+}
+.logo-icon {
+  position: absolute;
+  top: 5%; /* Adjusted for relative distance */
+  left: 55%;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 200px;
+}
+.informaes-para-cadastro {
+  position: absolute;
+  top: 449px;
+  left: 370px;
+  font-size: 20px;
+  text-decoration: underline;
+  display: inline-block;
+  width: 296px;
+  height: 23px;
+}
+.confirmao-da-senha,
+.e-mail,
+.nome-completo,
+.senha {
+  position: absolute;
+  top: 48%;
+  left: 27%;
+  display: inline-block;
+  width: 199px;
+  height: 23px;
+}
+.confirmao-da-senha,
+.e-mail,
+.senha {
+  left: 58%;
+}
+.confirmao-da-senha,
+.senha {
+  top: 58%;
+  left: 27%;
+}
+.confirmao-da-senha {
+  left: 58%;
+}
+.image-6,
+.rectangle-button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  position: absolute;
+}
+.image-6 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 23.94rem;
+  left: 23%;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(./image6@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.rectangle-button {
+  background-color: var(--verde);
+  top: 77%;
+  left: 43%;
+  border-radius: var(--br-2xl);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 24%;
+  height: 46px;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+  color: #464343;
+  text-align: center;
+}
+.enviar-e-mail-de {
+  position: absolute;
+  top: 890px;
+  left: 582px;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+  color: #464343;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 275px;
+  height: 50px;
+}
+
+.checkbox-estudante,
+.checkbox-professor {
+    position: absolute;
+    top: 35%; /* Adjust the top position accordingly */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    left: -30%; /* Adjust the left position accordingly */
+}
+
+.checkbox-label1,
+.checkbox-label2 {
+    position: absolute;
+    top: 72%; /* Adjust the top position accordingly */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+
+.checkbox-label1 {
+    left: 34%; /* Adjust the left position accordingly */
+}
+
+.checkbox-label2 {
+    left: 60%; /* Adjust the left position accordingly */
+}
+
+.checkbox-professor {
+    left: -38%; /* Adjust the left position accordingly */
+}
+
+.cadastro-child3 {
+    cursor: pointer;
+    position: absolute;
+    border-radius: var(--br-2xl);
+    background-color: var(--azulroxoclaro);
+    border: 1px solid var(--color-gray);
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+}
+
+.estudante {
+  position: absolute;
+  top: 714px;
+  left: 418px;
+  display: inline-block;
+  width: 199px;
+  height: 23px;
+}
+.termos-de-uso {
+  text-decoration: underline;
+}
+.li-e-concordo-container,
+.professor {
+  position: absolute;
+  top: 76.5%;
+  left: 32%;
+  display: inline-block;
+  width: 301px;
+  height: 23px;
+}
+.professor {
+  top: 713px;
+  left: 600px;
+  width: 199px;
+}
+.cadastro-child3 {
+  position: absolute;
+  top: 76.8%;
+  left: 28%;
+  background-color: var(--azulroxoclaro);
+  border: 1px solid var(--color-gray);
+  box-sizing: border-box;
+  width: 14px;
+  height: 13px;
+  transform: rotate(-2deg);
+  transform-origin: 0 0;
+}
+.cadastro {
+  position: relative;
+  background-color: var(--verde-claro);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-dimgray);
+  font-family: var(--font-kaisei-opti);
+}
+
+.termos-de-uso1 {
+    position: absolute;
+    top: 36.5%;
+    left: 30%;
+    font-size: 180%;
+    text-decoration: underline;
+    display: inline-block;
+    font-family: var(--font-kaisei-opti);
+    color: #000;
+    width: 100%;
+    height: 2.88rem;
+  }
+

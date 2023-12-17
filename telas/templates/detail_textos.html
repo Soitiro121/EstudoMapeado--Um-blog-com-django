@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{% static 'textos.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kaisei Opti:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="{% static 'comentarios.css' %}" />
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <div class="textos">
+        <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+        <b class="textos1">Textos</b>
+        <a href="{% url 'home' %}"><b class="sumrio">Sumário</b></a>
+
+        <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
+        <img class="image-31-icon" alt="" src="{% static 'image-31@2x.png' %}" />
+
+        <div class="textos-item">
+            {% if texto %}
+                <article class="card">
+                    {% if texto.link %}
+                        <img src="{{ texto.link }}" alt="Imagem do texto"/>
+                    {% endif %}
+                    
+                    <h1>{{ texto.title }}</h1>
+                    <p><small>{{ texto.created_on }}</small></p>
+                    <p>{{ texto.body }}</p>
+                </article>
+
+                <!-- Seção de Comentários -->
+                <div class="comentarios">
+                    <h2>Comentários</h2>
+                    {% for comentario in texto.comentarios.all %}
+                        <div class="comentario">
+                            <p><strong>{{ comentario.autor.username }}</strong> em {{ comentario.data_criacao }}</p>
+                            <p>{{ comentario.conteudo }}</p>
+                        </div>
+                    {% empty %}
+                        <p>Nenhum comentário ainda.</p>
+                    {% endfor %}
+
+                    <!-- Formulário para novo comentário -->
+                   {% if user.is_authenticated %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <textarea name="conteudo" placeholder="Adicione seu comentário..." required></textarea>
+                            <button type="submit">Postar Comentário</button>
+                        </form>
+                </div>
+                       {% endif %}
+            {% else %}
+                <p>Texto não encontrado.</p>
+            {% endif %}
+        </div>
+    </div>
+    {% else %}
+    <p>Você precisa estar logado para ver esta página.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- forum_template.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'forum.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de comunicação</title>
+</head>
+<body>
+    <b class="canal">Canal de comunicação</b>
+    
+    <img class="logo-icon" alt="" src="{% static 'logo@2x.png' %}" />
+
+    <a href="{% url 'home' %}"><b class="sumrio">Sumário</b></a>
+
+    <img class="image-20-icon" alt="" src="{% static 'image-20@2x.png' %}" />
+    <img class="image-31-icon" alt="" src="{% static 'image 13.png' %}" />
+
+    <div class="fundo_mensagens"></div>
+    <!-- Display existing forum messages -->
+    <section class="lista-de-cards">
+        <form method="post" action="{% url 'forum_post' %}">
+            {% csrf_token %}
+            <textarea class = 'texto' name="message" placeholder="Digite aqui a sua mensagem..."></textarea>
+            <button class='botao' type="submit">Enviar mensagem</button>
+        </form>
+        {% for message in forum_messages %}
+        <article class="card">
+            <p>{{ message.user.username }}</p>
+            <p>{{ message.message }}</p>
+            <p>{{ message.timestamp }}</p>
+        </article>
+        {% endfor %}
+
+        
+        
+       
+    </section>
+    
+
+</body>
+</html>

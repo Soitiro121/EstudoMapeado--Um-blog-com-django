@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-kaisei-opti: "Kaisei Opti";
+
+  /* font sizes */
+  --font-size-mini: 0.94rem;
+  --font-size-xl: 1.25rem;
+
+  /* Colors */
+  --cinzaroxo: #8f99bb;
+  --color-black: #000;
+  --verde: #93c47d;
+  --color-gray: rgba(0, 0, 0, 0.28);
+  --color-dimgray: #5a5353;
+  --amarelo: #fadfac;
+  --azulroxoclaro: #cde6f3;
+  --color-shadow: #9ea9cc;
+
+  /* Border radiuses */
+  --br-8xl: 27px;
+  --br-2xl: 21px;
+}
+
+.login {
+  position: relative;
+  background-color: var(--verde-claro);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-dimgray);
+  font-family: var(--font-kaisei-opti);
+}
+
+  .logo-icon {
+    position: absolute;
+    top: 4rem;
+    left: 93%;
+    width: 8.5%;
+    transform: translateX(-50%);
+    object-fit: cover;
+  }
+

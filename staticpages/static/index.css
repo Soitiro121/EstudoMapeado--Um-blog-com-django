@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-kaisei-opti: "Kaisei Opti";
+  --font-jsmath-cmr10: jsMath-cmr10;
+
+  /* font sizes */
+  --font-size-xl: 1.25rem;
+  --font-size-lg: 1.13rem;
+
+  /* Colors */
+  --verde-claro: #d5f9f1;
+  --color-dimgray: #5a5353;
+  --verde: #93c47d;
+  --color-gray: rgba(0, 0, 0, 0.28);
+  --azulroxoclaro: #cde6f3;
+  --cinzaroxo: #8f99bb;
+
+  /* Border radiuses */
+  --br-2xl: 21px;
+}
+
+.login {
+  position: relative;
+  background-color: var(--verde-claro);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-dimgray);
+  font-family: var(--font-kaisei-opti);
+}
+
+.logo-icon {
+  position: absolute;
+  top: 5%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 200px;
+}
+
+.login-child,
+.login-item,
+.login-inner,
+.rectangle-input,
+.rectangle-button,
+.login1,
+.senha,
+.criar-uma-conta,
+.esqueceu-sua-senha {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login-child {
+  top: 40%; /* Adjusted for relative distance */
+  border-radius: var(--br-2xl);
+  border: 1px solid var(--color-gray);
+  background-color: var(--azulroxoclaro);
+  box-sizing: border-box;
+  max-width: 17.75rem; /* Maximum size from the old file */
+  height: 2.3rem; /* Set height to match rectangle-input */
+}
+
+.login-item {
+  top: 40%; /* Adjusted for relative distance */
+  background-color: var(--cinzaroxo);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 17.75rem; /* Maximum size from the old file */
+}
+
+.login-inner,
+.rectangle-input {
+  top: 53%; /* Adjusted for relative distance */
+  border-radius: var(--br-2xl);
+  box-sizing: border-box;
+  height: 2.3rem;
+  max-width: 17.75rem; /* Maximum size from the old file */
+}
+
+.rectangle-input {
+  border: 1px solid var(--color-gray);
+  background-color: var(--azulroxoclaro);
+}
+
+.rectangle-button {
+  top: 65%; /* Adjusted for relative distance */
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--verde);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 7.81rem; /* Maximum size from the old file */
+  height: 2.38rem; /* Height from the old file */
+  color: #464343; /* Color of the other "Entrar" text */
+  font-size: var(--font-size-xl); /* Font size of the other "Entrar" text */
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.rectangle-button:hover {
+  background-color: #72a35b; /* Increase the size on hover */
+}
+
+.login1 {
+  top:35%;
+  left: 42%;
+}
+.senha {
+  top:49%;
+  left: 42%;
+}
+.criar-uma-conta {
+  top:70%;
+  left: 50%;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+}
+
+.esqueceu-sua-senha {
+  top: 59%;
+  left: 46%;
+  font-size: 0.93rem;
+}
+
+.criar-conta-button {
+  position: absolute;
+  top: 80%; /* Adjusted for relative distance */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22%;
+  cursor: pointer;
+  border: 5px;
+  padding: 0;
+  background-color: var(--cinzaroxo);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 2.7rem; /* Adjust as needed */
+  color: #464343;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.criar-conta-button:hover {
+  background-color: #858fad; /* Change color on hover */
+}
+
+
+@media (max-width: 300px) {
+  .login-child,
+  .login-item,
+  .login-inner,
+  .rectangle-input,
+  .rectangle-button,
+  .login1,
+  .senha,
+  .criar-uma-conta,
+  .esqueceu-sua-senha,
+  .criar-conta-button
+  .logo-icon {
+    width: 90%;
+    left: 5%;
+  }
+}
