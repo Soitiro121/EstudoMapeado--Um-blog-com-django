@@ -11,6 +11,8 @@ from .views import *
 urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='login.html', redirect_authenticated_user=True),
          name='login'),
+    path('', auth_views.LoginView.as_view(template_name='login.html', redirect_authenticated_user=True),
+         name='login'),
     path('cria_conta/', views.cria_conta, name='cria_conta'),
     path('altera_senha/', altera_senha, name='altera_senha'),
     path('termos/', views.termos, name='termos'),
